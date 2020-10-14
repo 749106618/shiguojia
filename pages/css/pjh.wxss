@@ -1,0 +1,7 @@
+/* 字体超出部分出现省略号 单行 */
+.o{
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,28 @@
+<!--pages/all_shop/all_shop.wxml-->
+<view class="cent">
+  <!-- y轴 -->
+  <view class="y">  
+    <text class="{{goodsId == item.id ? 'cActive' : ''}}" wx:for="{{styles}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="getGoods">{{item.name}}</text>
+    <!-- <text class="cActive">y轴</text> -->
+
+  </view>
+  <!-- 内容 -->
+  <scroll-view scroll-y='true' bindscrolltolower='defaultGoods' data-id='{{goodsId}}' data-flag='1' class="center">
+    <!-- 单个商品 -->
+    <view class="shop" wx:for="{{Goods}}" wx:key='{{index}}' bindtap="junpDetails" data-id="{{item.id}}">
+      <view class="shop_left">
+        <image src="{{imgHeader}}{{item.indexImg}}"></image>
+      </view>
+      <view class="shop_righ">
+        <text class="o shopTit">{{item.goodsTitle}}</text>
+        <text class="o shopcent">{{item.goodsDescribe}}</text>
+        <view class="sshop">
+          <image src="../image/add_cart.jpg" class="add_cart" mode="widthFix" data-id="{{item.id}}" catchtap="addCard"></image>
+          <text class="ssrmb">¥</text>
+          <text class="sspric">{{item.price}}</text>
+          <text class="sswidth">{{item.unit}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

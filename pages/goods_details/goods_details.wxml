@@ -1,0 +1,127 @@
+<!--pages/goods_details/goods_details.wxml-->
+<movable-area style="width:100vw;height:100vh">
+<image src="{{imgUrls[0]}}" mode="widthFix" class="shopImg"></image>
+<view class="poView">
+  <view class="centView">
+    <view class="cent1">
+      <view class="cTxt1">
+        <text>￥</text>
+        <text class="ccTxt1">{{price1}}</text>
+        <text>.{{price2}}</text>
+        <view class="p">
+          <text>￥</text>
+          <text class="ccTxt1">{{price1}}</text>
+          <text>.{{price2}}</text>
+        </view>
+      </view>
+      <view class="cTxt2">
+        市场价：￥{{goodsInfo.marketPrice}}
+      </view>
+      <!-- <view class="cTxt3">
+        <text>返利￥</text>
+        <text>{{profit_ratio1}}</text>
+        <text>.{{profit_ratio2}}</text>
+      </view> -->
+    </view>
+    <text class="cent2">{{goodsInfo.shopTitle}}</text>
+    <view class="cent3">
+      <view class="bz">三天内发货</view>
+      <view>{{goodsInfo.number}}</view>
+      <view>{{goodsInfo.weight}}</view>
+      <view>{{goodsInfo.availableStock}}</view>
+    </view>
+    <view class="cent4">
+      <view class="bz1">48小时售后</view>
+      <view>{{goodsInfo.unit}}</view>
+      <view>重量(kg)</view>
+      <view>库存</view>
+    </view>
+    <rich-text nodes="{{nodes}}"></rich-text>
+  </view>
+</view>
+<view class="footer">
+  <view class="footerLeft" bindtap="addCard">加入购物车</view>
+  <view class="btn" bindtap="tabShow">立即购买</view>
+</view>
+<view class="tab {{hua}}" wx:if='{{1==1}}'>
+  <view class="jian">
+    <text class="cent2">{{goodsInfo.shopTitle}}</text>
+    <image src="../image/close.png" mode="widthFix" class="close" bindtap="tabHide"></image>
+    <text class="cent5">三天内发货|雨天等不可控因素顺延</text>
+    <view class="cent3">
+      <view class="bz">三天内发货</view>
+      <view>{{goodsInfo.number}}</view>
+      <view>{{goodsInfo.weight}}</view>
+      <view>{{goodsInfo.availableStock}}</view>
+    </view>
+    <view class="cent4">
+      <view class="bz1">48小时售后</view>
+      <view>{{goodsInfo.unit}}</view>
+      <view>重量(kg)</view>
+      <view>库存</view>
+    </view>
+    <view class="address">
+      <image src="../image/gods.png" mode="widthFix" class="addImg"  bindtap='junpReceivingAddress'></image>
+      <view class="add">
+        <text class="aTxt1" bindtap='junpReceivingAddress'>{{name}} {{tel}}</text>
+        <text class="aTxt2" bindtap='junpReceivingAddress'>{{txt}}</text>
+        <view class="aView1">
+          <image src="../image/gods1.png" mode="widthFix" class="aImg1"></image>
+          <text class="aTxt3">请仔细核对地址，发货后不可更改</text>
+        </view>
+        <view class="aView">
+          <image src="../image/gods2.png" mode="widthFix" class="aImg2"></image>
+          <text class="aTxt4">免运费</text>
+        </view>
+        <view class="aView" bindtap="junpShopList">
+          <image src="../image/gods3.png" mode="widthFix" class="aImg2"></image>
+          <text class="aTxt4">{{juantxt}}</text>
+        </view>
+        <view class="aView" bindtap="selectDistrict">
+          <image src="../image/gods4.png" mode="widthFix" class="aImg2"></image>
+          <text class="aTxt5">{{orderType[buyType]}}</text>
+          <image src="../image/icon2.png" mode="widthFix" class="aImg3"></image>
+        </view>
+        <view class="back" catchtap="cityCancel" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}"></view>
+        <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+          <!-- <view style="height:10% ;width:95%;margin-top:10rpx;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;padding:5rpx 0;">
+            <text catchtap="cityCancel">确认</text>
+          </view> -->
+          <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;text-align: center" value="{{value}}" bindchange="bindChange">
+            <picker-view-column>
+              <view wx:for="{{orderType}}" wx:key='index' style="line-height: 50px">{{item}}</view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+      </view>
+    </view>
+    <view class="footer1">
+      <!-- <text class="fTxt1">￥</text><text class="fTxt2">{{price1}}</text><text class="fTxt3">.{{price2}}</text> -->
+      <view class="btn" bindtap='payclick'>立即购买</view>
+    </view>
+  </view>
+</view>
+<movable-view class="share" direction="all" x='{{x}}' y='{{y}}' bindtap="createPoster">
+  <text>一键</text>
+  <text>分享</text>
+</movable-view>
+<view class="shareview" wx:if='{{shareview==true}}' bindtap="hideshareview">
+  <image src="{{shareImg}}" mode="widthFix" class="shareviewImg"></image>
+</view>
+<view class="centerView" wx:if='{{shareview==true}}'>
+    <view bindtap="saveImg">
+      <image src="../image/share_xia.png" mode="widthFix" class="shareImg"></image>
+      <button hover-class="none">下载图片</button>
+    </view>
+    <view>
+      <button open-type='share' hover-class="none"><image src="../image/share_wei.png" mode="widthFix" class="shareImg"></image>微信</button>
+    </view>
+  </view>
+</movable-area>
+<loading hidden="{{onOff}}">加载中</loading>
+
+<!-- <view style='width: 100%; height: 100%; z-index: 999; display: flex; align-items: center; justify-content: center; animation: {{isShow ? "show" : "dismiss"}}Mask 0.3s forwards ease; position: fixed; top: 0; left: {{isCreate ? 0 : "750rpx"}};' catchtap='catchtap' catchtouchmove='blockTouches'>
+  <canvas canvas-id='poster' style='width: 622rpx; height: 882rpx; position: fixed; left: 750rpx;'></canvas>
+  <image style='width: 622rpx; height: 882rpx; margin-bottom: 96rpx;' src='{{poster}}'></image>
+  <button class='maskButton' hover-class='maskButton-hover' hidden='{{!isCreate}}' catchtap='btnCreate'>保存到本地相册</button>
+</view> -->

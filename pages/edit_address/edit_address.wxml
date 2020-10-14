@@ -1,0 +1,59 @@
+<!--pages/edit_address/edit_address.wxml-->
+<view class="cent">
+  <view class="addUl">
+    <view class="addLi" id="{{ac==1?'active':''}}">
+      <text>收货人</text>
+      <input placeholder-class="a" placeholder="请输入收货人" data-ac="1" bindfocus='hd' data-type="consignee" bindinput="onChange" value="{{consignee}}"></input>
+    </view>
+    <view class="addLi" id="{{ac==2?'active':''}}">
+      <text>联系方式</text>
+      <input placeholder-class="a" placeholder="请输入联系方式" data-ac="2" bindfocus='hd' data-type="phone" bindinput="onChange" value="{{phone}}"></input>
+    </view>
+    <view class="addLi" bindtap="selectDistrict">
+      <text>所在地区</text>
+      <button class='btn1'>{{areaInfo}}</button>
+    </view>
+    <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+      <view style="height:40rpx;line-height:40rpx;width:95%;margin-top:10rpx;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;padding:5rpx 0;">
+        <text catchtap="cityCancel">取消</text>
+        <text style="float: right" catchtap="citySure">确定</text>
+      </view>
+      <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="index1">
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key='index' class="picker-item">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" class="picker-item" wx:key="index">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{areas}}" class="picker-item" wx:key="index">{{item.name}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <view class="addLi" id="{{ac==3?'active':''}}">
+      <text>详细地址</text>
+      <input placeholder-class="a"  placeholder="请输入详细地址" data-ac="3" bindfocus='hd' data-type="address" bindinput="bindInput" value="{{address}}"></input>
+    </view>
+    <view class="addView" wx:if='{{isShow}}'>
+      <view bindtap="bindSearch" data-keywords="{{i.name}}" wx:key='index' class="text_box" wx:for="{{tips}}" wx:for-item="i">
+        {{i.name}}
+      </view>
+    </view>
+    <!-- <view wx:for="{{suggestion}}" wx:key="index" wx:if='{{isShow}}'>
+        <view>
+        <view style="text-align:center;" bindtap="backfill" id="{{index}}">{{item.title}}</view>
+        <view style="font-size:12px;color:#666;text-align:center;">{{item.addr}}</view>
+        </view>
+    </view> -->
+      <!-- 默认地址 -->
+    <view class="confirm_radio addLi">
+        <input type="radio" id="defualtAdd" name="defualtAdd"></input>
+        <label bindtap="check" class="{{isDefualtAdd == 1 ? 'checked':''}}">默认地址</label>
+    </view>
+  </view>
+  <button class="footer" bindtap="addres">{{footerTxt}}</button>
+  <!-- <view class="textarea">
+    <textarea placeholder="粘贴地址到此可智能识别"></textarea>
+    <image src="http://www.wjfresh.com/file/upload/20191015/1571121970519.png" mode="widthFix" class="shi"></image>
+  </view> -->
+</view>

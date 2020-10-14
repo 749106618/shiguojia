@@ -1,0 +1,18 @@
+<!--pages/open_details/open_details.wxml-->
+<view class="header">
+  <text>{{dataList.vipAmount}}元开通吾纪生鲜会员</text>
+  <text>即可成为VIP导购</text>
+  <text>还可获得价值728元的鲜果大礼包</text>
+</view>
+<view class="center">
+  <view class="shopList" wx:for='{{dataList.page.records}}' wx:key='index'>
+    <image class="shopImg" src="{{item.recommendImg}}" mode="widthFix"></image>
+    <text class="moster">{{item.marshallingSequence}}月</text>
+    <text class="shopTxt">{{item.shopTitle}}</text>
+  </view>
+</view>
+<view class="textView">
+  <text class="oTxt1">每月20号之前发货，如因天气及果期等不可控原因</text>
+  <text class="oTxt">吾纪生鲜有权将对应月份水果转为{{dataList.currencyReversion}}吾纪币发放</text>
+</view>
+<loading hidden="{{onOff}}">加载中</loading>

@@ -1,0 +1,67 @@
+<!--pages/user_index/user_index.wxml-->
+<view class="header">
+  <view class="headerTop">
+    <!-- <image src="{{wxUserAvatarUrl}}"  mode="widthFix"></image> -->
+    <view class="userimg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="user">
+      <open-data type='userNickName' class="userName" lang="zh_CN"></open-data>
+      <!-- <text class="userh">15080976915</text> -->
+    </view>
+  </view>
+</view>
+
+<!-- 订单 -->
+<view class="allOrder" bindtap="junpOrder" data-type="all" data-index='0'>
+  <text>我的订单</text>
+  <image src="../image/gd1_2.png" mode="widthFix" class="bzImg2"></image>
+  <text class="aTxt">全部订单</text>
+</view>
+<view class="btoUl">
+  <view class="btoLi red" bindtap="junpOrder" data-type="unpaid" data-index='1'>
+    <text wx:if='{{fundList.unpaid!=0}}'>{{fundList.unpaid}}</text>
+    <view class="Litop"><image src="../image/unpaid.png"></image></view>
+    <view class="Libot">待付款</view>
+  </view>
+  <view class="btoLi orn" bindtap="junpOrder" data-type="unshipped" data-index='2'>
+    <text wx:if='{{fundList.unshipped!=0}}'>{{fundList.unshipped}}</text>
+    <view class="Litop"><image src="../image/unshipped.png"></image></view>
+    <view class="Libot">待发货</view>
+  </view>
+  <view class="btoLi zi" bindtap="junpOrder" data-type="shipped" data-index='3'>
+    <text wx:if='{{fundList.shipped!=0}}'>{{fundList.shipped}}</text>
+    <view class="Litop"><image src="../image/shipped.png"></image></view>
+    <view class="Libot">已发货</view>
+  </view>
+  <view class="btoLi buler" bindtap="junpOrder" data-type="confir" data-index='4'>
+    <text wx:if='{{fundList.confirmed!=0}}'>{{fundList.confirmed}}</text>
+    <view class="Litop"><image src="../image/confirmed.png"></image></view>
+    <view class="Libot">售后</view>
+  </view>
+</view>
+
+<!-- 我的服务 -->
+<view class="my">
+  <text>我的服务</text>
+  <view class="myUl">
+    <view class="myLi" bindtap="junp" data-url='shopping_list'>
+      <view>
+        <image src="../image/user_1.png" class="mliImg1 img1"></image>
+      </view>
+      <view class="mLiBot">优惠券</view>
+    </view>
+    <view class="myLi" bindtap="createPoster">
+      <view>
+        <image src="../image/user_2.png" class="mliImg1 img2"></image>
+      </view>
+      <view class="mLiBot">在线客服</view>
+    </view>
+    <view class="myLi" bindtap="junp" data-url='receiving_address'>
+      <view>
+        <image src="../image/user_3.png" class="mliImg1 img3"></image>
+      </view>
+      <view class="mLiBot">收货地址</view>
+    </view>
+  </view>
+</view>

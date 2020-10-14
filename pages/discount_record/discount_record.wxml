@@ -1,0 +1,30 @@
+<!--pages/discount_record/discount_record.wxml-->
+<view class="header">
+  <view class="hpo">
+    <view class="hView1"><text class="hTxt1">可提现余额(元)</text></view>
+    <view><text class="hTxt3">{{all1}}</text><text class="hTxt4">.{{all2}}</text></view>
+    <view class="hBtn1" data-money="{{money}}" bindtap="junpWithDrawal">立即提现</view>
+  </view>
+</view>
+
+<view class="cent">
+  <view class="jian">
+    <view class="cTop">
+      <text class="cTxt1">提现记录</text>
+    </view>
+    <view class="listUl" wx:if='{{dataList.page.records!=undefined||dataList.page.records!=null}}'>
+      <view class="listLi" wx:for='{{dataList.page.records}}' wx:key='index'>
+        <image src="http://www.wjfresh.com/file/upload/20191011/1570758991562.png" mode="widthFix" class="liImg"></image>
+        <view class="liCent">
+          <text class="liCTop">{{item.describes}}</text>
+          <text class="liCBot">{{item.createTime}}</text>
+        </view>
+        <text class="liRight">+{{item.amount}}</text>
+      </view>
+    </view>
+    <view class="cNone">
+      <image src="http://www.wjfresh.com/file/upload/20191010/1570673953616.png" mode="widthFix" class="noneImg"></image>
+      <text>您还没有提现记录</text>
+    </view>
+  </view>
+</view>

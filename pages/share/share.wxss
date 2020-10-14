@@ -1,0 +1,36 @@
+/* pages/share/share.wxss */
+button::after {
+  order: none;
+  border: 0;
+}
+
+button {
+  background-color: #fff;
+  border: 0;
+  padding: 0;
+  line-height: 50rpx;
+}
+
+.button-hover{
+  color: #fff;
+}
+
+.codeImg{
+  width: 80vw;
+  margin: 0 auto;
+  display: block;
+}
+
+.centerView{
+  display: flex;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.centerView view{
+  flex: 1;
+}
+
+.shareImg{
+  width: 50rpx;
+}

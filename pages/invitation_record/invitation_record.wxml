@@ -1,0 +1,27 @@
+<!--pages/invitation_record/invitation_record.wxml-->
+<view class="header">
+  <view class="hpo">
+    <text class="hTxt1">累计邀请奖励(元)</text>
+    <text class="hTxt2">{{all1}}</text><text class="hTxt3">.{{all2}}</text>
+    <text class="hTxt4">共邀请：{{dataList.count}}人</text>
+  </view>
+</view>
+
+<view class="cent">
+  <view class="jian">
+    <text class="cTxt1">邀请人员</text>
+    <view class="listUl">
+      <view class="listLi" wx:for='{{dataList.page.records}}' wx:key='index'>
+        <image src="{{item.beUserImg}}" mode="widthFix" class="liImg"></image>
+        <view class="liCent">
+          <text class="liCTop">{{item.beUserNickname}}</text>
+          <text class="liCBot">{{item.invitationTime}}</text>
+        </view>
+        <text class="liRight">+{{dataList.invitedEarning}}</text>
+      </view>
+    </view>
+    <view class="cNone">
+      <image src="http://www.wjfresh.com/file/upload/20191011/1570758156058.png" mode="widthFix" class="noneImg"></image>
+    </view>
+  </view>
+</view>

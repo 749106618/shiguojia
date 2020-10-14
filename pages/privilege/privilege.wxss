@@ -1,0 +1,114 @@
+page {
+  background-color:rgb(242, 242, 242);
+}
+
+.main_top {
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(62, 59, 80);
+  border-bottom-left-radius:70rpx; 
+  border-bottom-right-radius:70rpx; 
+  overflow: hidden;
+  position: relative;
+}
+
+.img_card {
+  width: 90%;
+  height: 380rpx;
+  margin-left: 5%;
+  position: absolute;
+  bottom: -25px;
+  background-image: url('http://www.wjfresh.com/file/upload/20191012/1570850093127.png');
+  background-size: 100% 100%;
+}
+
+.img_card_title {
+  color: rgb(209, 187, 79);
+  text-indent: 60rpx;
+  line-height: 100rpx;
+  font-family: Microsoft YaHei;
+  font-size: 30rpx;
+}
+
+.img_card_phone {
+  color: rgb(209, 187, 79);
+  text-indent: 60rpx;
+  line-height: 100rpx;
+  font-family: Microsoft YaHei;
+  font-size: 50rpx;
+}
+
+.img_card_text {
+  color: rgb(209, 187, 79);
+  text-indent: 60rpx;
+  line-height: 10rpx;
+  font-family: Microsoft YaHei;
+  font-size: 22rpx;
+}
+
+.img_card_date {
+  color: rgb(209, 187, 79);
+  text-indent: 60rpx;
+  margin-top: 70rpx;
+  font-family: Microsoft YaHei;
+  font-size: 22rpx;
+}
+
+.main_bottom {
+  width: 90%;
+  height: 68vh;
+  margin-left: 5%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0rpx;
+  border-top-left-radius: 70rpx;
+  border-top-right-radius: 70rpx;
+  overflow: auto;
+}
+
+.tips_title {
+  font-family: Microsoft YaHei;
+  font-size: 27rpx;
+  line-height: 100rpx;
+  text-indent: 70rpx;
+  color: #333;
+}
+
+.tips_list {
+  width: 80%;
+  height: 100rpx;
+  margin: 0 auto;
+}
+
+.tips_list_icon {
+  float: left;
+  width:60rpx;
+  height: 60rpx;
+}
+
+.tips_list_text {
+  float: left;
+  width: 350rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  margin-left: 20rpx;
+  line-height: 40rpx;
+}
+
+.tips_list_text view {
+  font-size: 24rpx;
+  color: rgb(158, 158, 158);
+  line-height: 20rpx;
+}
+
+.tips_list_chose {
+  font-size: 28rpx;
+  color: rgb(158, 158, 158);
+  line-height: 80rpx;
+  float: right;
+}
+
+.chose {
+  color: rgb(252, 182, 9);
+}

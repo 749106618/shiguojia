@@ -1,0 +1,25 @@
+<!--提现-->
+<view class="wview">
+  <view class="color"></view>
+  <view class="jian">
+    <view class="wheader">
+      <view class="head_left">提现至微信</view>
+      <view class="head_right">
+        <image src="{{fundList.userinfo.userImgAddress}}" mode="widthFix" class="headerImg"></image>
+        {{fundList.userinfo.nickName}}
+      </view>
+    </view>
+    <view class="wcont">
+      <text class="text_1">提现金额</text>
+      <view class="input_view">
+        <text class="text_2">¥</text>
+        <input type="digit" class="input1" bindinput="money" value="{{moeny}}"></input>
+      </view>
+      <text class="text_3">可提现金额{{options.moeny}}元，</text>
+      <text class="text_4" bindtap="all">全部提现</text>
+      <text class="text_5">单比提现最高100元</text>
+      <button bindtap="withdrawal">提现</button>
+    </view>
+  </view>
+</view>
+

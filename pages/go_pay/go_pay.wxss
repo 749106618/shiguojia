@@ -1,0 +1,5 @@
+/* pages/go_pay/go_pay.wxss */
+@import"../confirm_order/confirm_order.wxss";
+.aTxt1,.aTxt2{
+  text-indent: 140rpx;
+}

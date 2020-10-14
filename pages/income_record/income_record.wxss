@@ -1,0 +1,138 @@
+/* pages/income_record/income_record.wxss */
+page{
+  background: #f9f8f8
+}
+
+.header{
+  position: relative;
+  width: 100vw;
+  height: 35vh;
+  background: #3a3b4f;
+  border-bottom-right-radius: 70rpx;
+  border-bottom-left-radius: 70rpx;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hpo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 700rpx;
+  height:  28vh;
+  background: url(http://www.wjfresh.com/file/upload/20191009/1570584755681.png);
+  background-size: 100% 100%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.hTxt1{
+  display: block;
+  margin: 50rpx 0 40rpx 40rpx;
+  font-size: 32rpx;
+}
+
+.hTxt2{
+  /* margin-left: 40rpx; */
+  font-size: 60rpx;
+  margin-left: 40rpx;
+}
+
+.hTxt3{
+  font-size: 30rpx;
+}
+
+.hTxt4{
+  display: block;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}
+
+.cent{
+  width: 700rpx;
+  margin: 2vh auto 0 auto;
+  height: 63vh;
+  background: #fff;
+  border-top-left-radius: 90rpx;
+  border-top-right-radius: 90rpx;
+  box-shadow: 0 0 10rpx #f1f1f2;
+  position: relative;
+  overflow: auto;
+}
+
+.jian{
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  width: 100%
+}
+
+.cTxt1{
+  font-size: 30rpx;
+  line-height: 100rpx;
+  display: block;
+  font-weight: bold;
+  text-indent: 40rpx;
+}
+
+.listUl{
+  float: left;
+  width: 86%;
+  margin-left: 7%;
+}
+
+.listLi{
+  float: lef;
+  width: 100%;
+  height: 100rpx;
+}
+
+.liCent{
+  float: left;
+  margin-left: 20rpx;
+}
+
+.liCTop{
+  font-weight: bold;
+  font-size: 29rpx;
+}
+
+.liCBot{
+  color: #9a9a9a;
+  font-size: 25rpx;
+  display: block;
+}
+
+.liRight{
+  float: right;
+  margin-top: 10rpx;
+}
+
+.liImg{
+  width: 70rpx;
+  float: left;
+}
+
+.cNone{
+  float: left;
+  margin-top: 100rpx;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.noneImg{
+  display: block;
+  width: 300rpx;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+
+.text{
+  display: block;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 10px;
+  color: #000;
+}

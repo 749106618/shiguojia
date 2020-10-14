@@ -1,0 +1,155 @@
+/* pages/user_index/user_index.wxss */
+.header{
+  width: 100vw;
+  height: 400rpx;
+  background: url('https://www.wjfresh.com/file/upload/20200305/1583376133428.png') no-repeat;
+  background-size:100% 100%;
+  float: left;
+}
+
+.headerTop{
+  float: left;
+  margin: 40rpx 0 70rpx 40rpx;
+}
+
+.userimg{
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  box-shadow: 0 0 10rpx #777;
+  border-radius: 50%;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+  overflow: hidden;
+}
+.user{
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+}
+
+.userName{
+  display: block;
+  margin-top: 10rpx;
+  font-weight: 500;
+}
+
+.userh{
+  font-size: 24rpx;
+  color: #505050;
+}
+
+.btoUl{
+  width: 92vw;
+  margin: 0 auto;
+}
+
+.btoLi{
+  width: 22%;
+  text-align: center;
+  color: #fff;
+  float: left;
+  padding: 30rpx 0; 
+  border-radius: 20rpx;
+  margin-right:4%;
+  position: relative;
+}
+.btoLi:last-child{
+  margin-right: 0
+}
+.btoLi text{
+  display: inline-block;
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: #fa5251;
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  right: 30rpx;
+  top: 10rpx;
+}
+.red{background: linear-gradient(315deg, #e36e7f, #f3807a)}
+.orn{background: linear-gradient(315deg, #fea76e, #e9bf52)}
+.zi{background: linear-gradient(315deg, #645ebc, #8280d2)}
+.buler{background: linear-gradient(315deg, #05a2e8, #49cacf)}
+
+.red image{width: 50rpx;height: 50.8rpx;}
+.orn image{width: 53rpx;height: 53rpx;}
+.zi image{width: 58rpx;height: 49rpx;}
+.buler image{width: 50rpx;height: 52rpx;}
+
+.Libot{
+  font-size: 28rpx;
+}
+
+.pbot{
+  font-size: 20rpx;
+}
+.bzImg2{
+  width: 17rpx;
+  vertical-align: middle;
+  margin-left:18rpx;
+  margin-top: 8rpx;
+  float: right;
+}
+.allOrder{
+  float: left;
+  width: 92vw;
+  margin: 20rpx 4vw;
+}
+.allOrder text:first-child{
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 15rpx;
+}
+
+.aTxt{
+  float: right;
+  font-size: 30rpx;
+  color: #666
+}
+
+/* 我的服务 */
+.my{
+  float: left;
+  width: 92vw;
+  margin: 30rpx 4vw;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx #e1e1e1;
+  padding: 45rpx 0;
+}
+
+.my>text{
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 15rpx;
+}
+
+.myUl{
+  width: 100%;
+}
+
+.myLi{
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+}
+
+.mliImg1{
+  width: 50rpx;
+}
+
+.img2{
+  height: 49rpx;
+}
+
+.img3,.img1{
+  height: 52rpx;
+}

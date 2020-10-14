@@ -1,0 +1,47 @@
+<!--pages/open/open.wxml-->
+<image src="../image/logo.png" mode="widthFix" class="headerImg"></image>
+<text class="hTxt1" wx:if='{{yq==true}}'>邀请码</text>
+<text class="hTxt2" wx:if='{{yq==true}}'>{{code1}}-{{code2}}</text>
+<navigator url="../open_details/open_details" hover-class="none" class="details">开通福利说明</navigator>
+<view class="inputView">
+  <view>
+    <image src="http://www.wjfresh.com/file/upload/20191011/1570776911936.png" mode="widthFix" class="phone"></image>
+    <input type="text" placeholder="请输入手机号码"  maxlength='11' bindinput='user' value="{{user}}"></input>
+  </view>
+  <view>
+    <image src="http://www.wjfresh.com/file/upload/20191011/1570776929647.png" mode="widthFix" class="pimg2"></image>
+    <input type="text" placeholder="手机验证码"  maxlength='6' bindinput='ucode' id="code" value="{{ucode}}"></input>
+    <button id="pTxt" disabled='{{disabled}}' bindtap='sendMessage'>{{time}}</button>
+  </view>
+  <view class="pview">
+    <input type="text" placeholder="收货人" bindinput='inputIn' data-type="consignee" value="{{consignee}}"></input>
+  </view>
+  <view class="addLi" bindtap="selectDistrict">
+    <button class='btn1'>{{areaInfo}}</button>
+  </view>
+  
+  <view class="pview">
+    <input type="text" placeholder="详细地址" bindinput='inputIn' data-type="address" value="{{address}}"></input>
+  </view>
+</view>
+
+<button class="subimt" open-type='getUserInfo' lang="zh_CN" bindgetuserinfo='pjUserInfo'>立即开通</button>
+<navigator url="../userAgreement/userAgreement" hover-class="none" class="details">开通服务条款</navigator>
+<loading hidden="{{onOff}}">加载中</loading>
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:40rpx;line-height:40rpx;width:95%;margin-top:10rpx;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;padding:5rpx 0;">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key='index' class="picker-item">{{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">{{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

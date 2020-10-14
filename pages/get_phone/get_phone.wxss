@@ -1,0 +1,27 @@
+/* pages/get_phone/get_phone.wxss */
+image{
+  width: 100vw;
+}
+
+view{
+  width: 35vw;
+  float: left;
+  margin-top: 20vh;
+  margin-left: 15vw;
+  font-size: 30rpx;
+  background: rgb(190, 190, 190);
+  text-align: center;
+  line-height: 2.55555556;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+button{
+  float: left;
+  width: 35vw;
+  margin-left: 15rpx;
+  background: #286a34;
+  color: #fff;
+  margin-top: 20vh;
+  font-size: 30rpx;
+}

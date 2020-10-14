@@ -1,0 +1,117 @@
+<!--pages/confirm_order/confirm_order.wxml-->
+<!-- 地址 -->
+<view class="shop_box n_border">
+  <view class="control_info" bindtap='junpReceivingAddress'>
+    <image wx:if="{{txt=='请点击这里设置地址'}}" src="https://www.wjfresh.com/file/upload/20200310/1583820618446.png" mode="widthFix"></image>
+    <image wx:elif="{{txt!='请点击这里设置地址'}}" src="https://www.wjfresh.com/file/upload/20200310/1583820678254.png" mode="widthFix"></image>
+
+    <view class="tit_box">
+      <p class="name fl ov">{{txt}}</p>
+      <p class="icon_img">
+        <image mode='widthFix' src='https://www.wjfresh.com/file/upload/20200310/1583823555189.png'></image>
+      </p>
+    </view>
+    <view class="address">
+      <view class="txt ov">{{name}} {{tel}}</view>
+    </view>
+  </view>
+</view>
+<!-- 配送/自提 -->
+<view class="shop_box">
+  <view class="buts">
+    <view id="{{check==1 ? 'active':''}}" bindtap="changeType" data-check='1'>配送</view>
+    <view id="{{check==2 ? 'active':''}}" bindtap="changeType" data-check='2'>自提</view>
+    <text wx:if='{{check==1}}'>最慢明天08:00-18:00送达</text>
+    <text wx:if='{{check==2}}'>自提地址：{{address}}</text>
+    <text wx:if='{{check==2}}'>自提时间：9:00-21:00</text>
+    <text wx:if='{{check==2}}'>联系电话：{{dTel}}</text>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class="shop_box">
+  <view class="shop_term confirm_term">
+    <text class="fontwe">订单详情</text>
+    <view class="select" wx:for="{{conData.order.orderItems}}" wx:key="index">
+      <image mode='widthFix' src='{{imgHeader}}{{item.thumbnail}}'></image>
+        <view class="term_center">
+          <view class="shop_title">{{item.goodsInfo.goodsTitle}}</view>
+          <view class="shop_decs">{{item.goodsInfo.unit}}</view>
+        </view>
+        <view class="term_right">
+          <text class="zi">×{{item.quantity}}</text>
+        </view>
+        <view class="confirm_right bview">
+          <view class="price">
+            <view class="money clearfix">
+              <text class="fr">¥ {{item.goodsInfo.price}}</text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>
+<!-- 买家留言 -->
+<view class="shop_box">
+  <p><span class="fl fontwe">买家留言</span></p>
+  <input maxlength="50" placeholder="50字以内(选填)" bindinput="setFont"></input>
+</view>
+<!-- 价格列表 -->
+<view class="shop_box">
+  <p>
+    <span class="fl fontwe">配送费 （满99免运费）</span>
+    <span class="num fr" id="youf">¥{{conData.order.freight}}</span>
+  </p>
+  <p bindtap="junpShopList">
+    <span class="fl fontwe">优惠劵</span>
+    <span class="num fr" id="discount" data-id="{{discountId}}">¥{{conData.order.couponDiscount}}</span>
+  </p>
+  <text class="amountP">共件{{conData.order.quantity}}商品,合计：￥{{amountPayable}}</text>
+</view>
+<view style='height:96rpx'></view>
+<!-- 底部确认订单 -->
+<view class="settle_box">
+  <view class="settle_center">
+    <a class="settle_btn" bindtap="zhezshow1">去支付</a>
+    <view class="total_amount total_box">
+      <span class="txt fl">待支付 </span>
+      <span class="price fl">
+        <span> ¥</span>
+        <b>{{amountPayable}}</b>
+      </span>
+    </view>
+  </view>
+</view>
+<!-- 遮罩 -->
+<view class='zhez' wx:if='{{1==flag}}' bindtap='zhezshow'></view>
+<!-- 确认订单 -->
+<view class="payment_box" wx:if='{{1==flag}}'>
+  <view class="center">
+    <view class="payment_tit">
+      付款详情
+      <p class="i_img">
+        <image src='http://www.wjfresh.com/file/upload/20190226/1551142011233.png' mode='widthFix' bindtap='zhezshow'></image>
+      </p>
+    </view>
+    <ul>
+      <li id="weixinPay">
+        <span class="order_prick_1">订单金额</span>
+        <span class="order_prick">¥ {{orderprice}}</span>
+      </li>
+      <li>
+        <p class="need">
+          <span class="txt">邮费</span>
+          <span class="youf_num" style="padding-right: 0.2rem;">¥ {{youf}}</span>
+        </p>
+      </li>
+      <li>
+        <p class="need">
+          <span class="txt">需付款</span>
+          <span class="num" style="padding-right: 0.2rem;">¥ {{conData.order.amountPayable}}</span>
+        </p>
+      </li>
+    </ul>
+    <a bindtap='payclick' class="confirm">
+      <img src="images/btn_wx.png" /> 确认付款
+    </a>
+  </view>
+</view>

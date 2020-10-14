@@ -1,0 +1,30 @@
+<view class="main">
+    <view class="main_top">
+        <view class="img_card" style="">
+          <view class="img_card_title">鲜果包年套餐会员</view>
+          <view class="img_card_phone">{{code1}}-{{code2}}</view>
+          <view class="img_card_text">您的会员号也是您的专属邀请码</view>
+          <view class="img_card_date">{{dataList.vipEndTime}} 到期</view>
+        </view>
+    </view>
+    <view class="main_bottom">
+        <view class="tips_title">赠品发放情况</view>
+        <view class="tips_list" wx:for='{{dataList.page.records}}' wx:key='index' data-type='{{item.deliveryCorp}}' data-signa='{{item.signA}}' data-postid='{{item.trackingNo}}' data-id="{{item.id}}" bindtap="junpPoder">
+            <view class="tips_list_icon">
+                <image src="{{item.paymentStatus=='paid'||item.orderStatus=='cancelled' ? 'http://www.wjfresh.com/file/upload/20191018/1571390598310.png':'http://www.wjfresh.com/file/upload/20191018/1571390639082.png'}}" mode="widthFix" style="width:60rpx;"></image>
+            </view>
+            <view class="tips_list_text">
+                {{item.memo}}<br/>
+                <view>{{item.createDate}}</view>
+            </view>
+            <!-- chose：查看 -->
+            <view class="tips_list_chose {{item.paymentStatus=='paid'||item.orderStatus=='cancelled'?'':'chose'}}">
+                <text wx:if="{{item.paymentStatus=='unpaid'&&item.orderStatus!='cancelled'}}">查看</text>
+                <text wx:elif="{{item.paymentStatus=='paid'}}">已确认</text>
+                <text wx:elif="{{item.orderStatus=='cancelled'}}">已放弃</text>
+                <image wx:if="{{item.paymentStatus=='unpaid'&&item.orderStatus!='cancelled'}}" src="http://www.wjfresh.com/file/upload/20191018/1571390669272.png" mode="widthFix" style="width:11rpx;"></image>
+            </view> 
+        </view>
+    </view>
+</view>
+<loading hidden="{{onOff}}">加载中</loading>

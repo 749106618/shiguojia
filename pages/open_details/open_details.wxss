@@ -1,0 +1,63 @@
+/* pages/open_details/open_details.wxss */
+.header{
+  text-align: center;
+  width: 85vw;
+  margin: 20rpx auto;
+  border: 4rpx solid #000;
+}
+
+.header text{
+  display: block;
+}
+
+.center{
+  width: 85vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+
+.shopList{
+  width: 33%;
+  text-align: center;
+  float: left;
+  margin-top: 15rpx;
+}
+
+.shopImg{
+  width: 90%;
+}
+
+.shopList text{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+
+.moster{
+  border: 2rpx solid #000;
+  width: 90%;
+}
+
+.shopTxt{
+  font-size: 25rpx;
+  width: 100%;
+}
+
+[class^=oTxt]{
+  width: 85vw;
+  text-align: left;
+  display: block;
+  font-size: 23rpx;
+  margin: 0 auto;
+}
+
+.textView{
+  float: left;
+  width: 100%;
+  margin-top: 20rpx;
+}

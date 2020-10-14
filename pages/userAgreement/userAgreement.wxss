@@ -1,0 +1,21 @@
+/* pages/userAgreement/userAgreement.wxss */
+page{
+  width: 90vw;
+  margin: 0 auto;
+}
+
+text{
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.txtTit{
+  color: #ff9e00;
+  font-size: 30rpx;
+}
+
+.txt{
+  color: #222;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}

@@ -1,0 +1,49 @@
+<!--pages/shop_cart/shop_cart.wxml-->
+<view class="shop_box" wx:if='{{cartItems[0]!=null||cartItems[0]!=undefined}}'>
+  <ul class="shop_term container">
+    <li class="select touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{cartItems}}" wx:key="index" data-index='{{index}}' data-id="{{item.id}}" bindtap="pitchOn">
+      <view class="shop_info content">
+        <!-- pitch_on -->
+        <view class="circle {{select[index] == 1 ? 'pitch_on':'a'}}"></view>
+        <image src='{{imgHeader}}{{item.goodsInfo.recommendImg}}' class='shop_img_img mt'></image>
+        <view class="term_center">
+          <p class="shop_title">{{item.goodsInfo.goodsTitle}}</p>
+          <text class="shop_decs ov">{{item.goodsInfo.goodsDescribe}}</text>
+          <p class="shop_price">¥
+            <i class="price">{{item.goodsInfo.price}}</i>
+          </p>
+        </view>
+        <view class="term_right">
+          <image catchtap="min" data-index='{{index}}' data-id="{{item.id}}" src="https://www.wjfresh.com/file/upload/20200308/1583667677055.png" mode="widthFix"></image>
+          <span class="zi">{{item.quantity}}</span>
+          <image catchtap='add' data-index='{{index}}' data-id="{{item.id}}" src="https://www.wjfresh.com/file/upload/20200308/1583667694583.png" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="del" catchtap="del" data-id='{{item.id}}' data-index="{{index}}">删除</view>
+    </li>
+  </ul>
+  
+</view>
+<view class="shop_none" wx:if='{{cartItems[0]==null||cartItems[0]==undefined}}'>
+  <image bindtap="junpGoodsDetails" mode="widthFix" src='https://www.wjfresh.com/file/upload/20200304/1583302802789.png'></image>
+</view>
+<view class="jian"></view>
+<view class="settle_box" wx:if='{{cartItems[0]!=null||cartItems[0]!=undefined}}'>
+  <view class="settle_center">
+    <view class="all_check {{ids.length==cartItems.length?'red':'b'}}" bindtap="pitchOnAll">
+      <!-- <span id="all_pitch_on" class="{{select[index] == 1 ? 'pitch_on':'a'}}"></span> -->
+      <view class="circle {{ids.length==cartItems.length ? 'pitch_on':''}}"></view>
+      <em>全选</em>
+    </view>
+    <a class="settle_btn" href="#" bindtap='settleBtn'>结算</a>
+    <view class="total_amount">
+      <span class="price">
+        ¥
+        <b>{{price}}</b>
+      </span>
+    </view>
+  </view>
+</view>
+<view class="juan" bindtap="juan" wx:if='{{frist==true}}'>
+  <image src="http://www.wjfresh.com/file/upload/20191022/1571723682348.jpg" mode="widthFix" class="juanImg" bindtap="junpSplist"></image>
+</view>

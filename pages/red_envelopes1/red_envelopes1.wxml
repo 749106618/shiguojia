@@ -1,0 +1,66 @@
+<!--pages/red_envelopes1/red_envelopes1.wxml-->
+<view class="redE">
+  <view class="ePo" wx:if='{{ePo}}'>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+    <view class="ePoImg"></view>
+  </view>
+  <view class="ePo"wx:if='{{!ePo}}'>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+    <view class="ePoImg1">
+      <text class="eText">0.80</text>
+      <text class="eText1">元</text>
+    </view>
+  </view>
+</view>
+<view class="redList">
+  <view>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+    <text>2020-06-06 14:30抽取0.80元红包</text>
+  </view>
+</view>

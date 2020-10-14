@@ -1,0 +1,80 @@
+<!--pages/refund/refund.wxml-->
+<view class="shop_box">
+  <text class="fontwe">售后原因</text>
+  <view class="buts">
+    <view id="{{check==1 ? 'active':''}}" bindtap="changeType" data-check='1'>急速理赔坏果</view>
+    <view id="{{check==2 ? 'active':''}}" bindtap="changeType" data-check='2'>其他售后类型</view>
+  </view>
+</view>
+<view class="shop_box">
+  <text class="fontwe">订单详情</text>
+  <view class="select" wx:for="{{dataList[options.index].orderItems}}" wx:key="index">
+    <image mode='widthFix' src='{{imgHeader}}{{item.thumbnail}}'></image>
+    <navigator hover-class='none' url='../goods_details1/goods_details1?goodsId={{item.goodsInfo.shopId}}' data-id="{item.goodsInfo.id}}">
+      <view class="term_center">
+        <view class="shop_title ov2">{{item.goodsInfo.goodsTitle}}</view>
+        <view class="shop_decs">{{item.goodsInfo.unit}}</view>
+      </view>
+      <view class="term_right">
+        <text class="zi">×{{item.quantity}}</text>
+      </view>
+      <view class="confirm_right bview">
+        <view class="price">
+          <view class="money clearfix">
+            <text class="fr">¥ {{item.goodsInfo.price}}</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <text class="shopB_po">{{options.orderId}}</text>
+</view>
+<view class="shop_box">
+  <text class="fontwe">问题描述</text>
+  <textarea id="textarea" placeholder="请在此描述问题" bindinput="yy"></textarea>
+  <image src='{{imgSrc}}' class="refundImg" id="portrait" catchtap='chooseImage' wx:if="{{imgList.length<1}}"></image>
+  <view wx:for='{{imgList}}' wx:key='index' class="viewImg">
+    <image mode="widthFix" src="http://www.wjfresh.com/file/upload/20190805/1564967482469.png" class="removeImg" data-index='{{index}}' bindtap="removeImg"></image>
+    <image  mode='widthFix' src='{{imgList[index]}}' class="refundImg" data-index='{{index}}'></image>
+  </view>
+</view>
+<view style="height:80rpx;"></view>
+<view class="submit" bindtap="refund">提交</view>
+<!-- <view class="cent">
+  <view class="form">
+    <view class="li">
+      <text class="ltit">收货人手机号</text>
+      <text class="lcent">{{options.phone}}</text>
+    </view>
+    <view class="li">
+      <text class="ltit">快递单号</text>
+      <text class="lcent">{{options.trackingNo}}</text>
+    </view>
+    <view class="li">
+      <text class="ltit">售后原因</text>
+      <radio-group bindchange='item_change'>
+        <label>
+          <radio checked="checked" class="{{check==1?'yellow':''}}" value="1">其他售后类型</radio>
+          <radio checked="" value="2" class="{{check==2?'yellow':''}}">极速坏果理赔</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view class="li" id="{{ac==1?'active':''}}" wx:if='{{check==1}}'>
+      <text class="ltit">售后原因</text>
+      <input type="text" class="linput" data-ac="1" bindfocus='hd' bindinput="yy" value="{{yy}}"></input>
+    </view>
+    <view class="li" id="{{ac==2?'active':''}}">
+      <text class="ltit">收到果子总数</text>
+      <input type="text" class="linput" data-ac="2" bindfocus='hd' bindinput="zz" value="{{phone}}"></input>
+    </view>
+    <view class="li">
+      <text class="ltit">上传图片</text>
+      <image mode='widthFix' src='{{imgSrc}}' class="refundImg" id="portrait" bindtap='chooseImage' wx:if="{{imgList.length<1}}"></image>
+      <view wx:for='{{imgList}}' wx:key='index' class="viewImg">
+        <image mode="widthFix" src="http://www.wjfresh.com/file/upload/20190805/1564967482469.png" class="removeImg" data-index='{{index}}' bindtap="removeImg"></image>
+        <image  mode='widthFix' src='{{imgList[index]}}' class="refundImg" data-index='{{index}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer" bindtap="refund">确认添加</view> -->

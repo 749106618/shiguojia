@@ -1,0 +1,95 @@
+<!--pages/order_details/order_details.wxml-->
+<!-- 订单状态/下单时间 -->
+<view class="shop_box">
+  <view class="status_top">
+    <image src="{{oImg}}" mode="widthFix"></image>
+    <text>{{options.status}}</text>
+  </view>
+  <text class="status_cen b">{{h3text}} {{timeDiff}}</text>
+  <text class="status_bot b" wx:if='{{dataList.order.deliveryCorp==undefined}}'>{{dataList.order.createDate}}</text>
+  <view class="status_bot" wx:if='{{dataList.order.deliveryCorp!=undefined}}'>
+    <text>{{dataList.order.deliveryCorp}}</text>
+    <text wx:if="{{dataList.order.deliveryCorp=='骑手送达'}}">{{dataList.order.trackingNo}} </text>
+    <text class="right" wx:if="{{dataList.order.deliveryCorp=='骑手送达'}}" data-phone='{{dataList.order.trackingNo}}' bindtap="createPoster">联系骑手</text>
+  </view>
+</view>
+<!-- 订单编号/收货地址 -->
+<view class="shop_box padB">
+  <view class="add_orderIdT" bindtap='copyText' data-text="{{dataList.order.id}}">
+    <text class="odId_Add_left">订单编号</text>
+    <text class="odId_Add_Righ odsSize">复制</text>
+    <text class="odId_Add_Righ odWid ov odsSize" id='mL'>{{dataList.order.id}}</text>
+  </view>
+  <view class="add_orderIdB">
+    <text class="odId_Add_left">收货地址</text>
+    <text class="odId_Add_Righ odWid ov">{{dataList.order.address}}</text>
+  </view>
+  <text class="consignee">{{dataList.order.consignee}} {{dataList.order.phone}}</text>
+</view>
+<!-- 商品 -->
+<view class="shop_box">
+  <view class="selectT">
+    <image src="https://www.wjfresh.com/file/upload/20200313/1584033403336.png" mode="widthFix"></image>
+    <text class="fontwe">包裹</text>
+  </view>
+  <view class="select" wx:for="{{dataList.order.orderItems}}" wx:key="index">
+      <image mode='widthFix' src='{{imgHeader}}{{item.thumbnail}}'></image>
+      <navigator hover-class='none' url='../goods_details1/goods_details1?shopId={{item.goodsInfo.id}}' data-id="{item.goodsInfo.id}}">
+        <view class="term_center">
+          <view class="shop_title ov2">{{item.goodsInfo.goodsTitle}}</view>
+          <view class="shop_decs">{{item.goodsInfo.unit}}</view>
+        </view>
+        <view class="term_right">
+          <text class="zi">×{{item.quantity}}</text>
+        </view>
+        <view class="confirm_right bview">
+          <view class="price">
+            <view class="money clearfix">
+              <text class="fr">¥ {{item.goodsInfo.price}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+</view>
+<!-- 总价/配送费 -->
+<view class="shop_box">
+  <p>
+    <span class="fl fontwe">配送费</span>
+    <span class="num fr" id="youf">{{freight}}</span>
+  </p>
+  <p>
+    <span class="fl fontwe">商品总价</span>
+    <span class="num fr" id="discount">¥{{dataList.order.price}}</span>
+  </p>
+  <view class="amountP">实付金额：<text>￥{{dataList.order.amountPaid}}</text></view>
+</view>
+<!-- 支付方式/状态 -->
+<view class="shop_box1">
+  <text>支付方式：{{dataList.order.paymentMethodName}}</text>
+  <view>支付状态：
+    <text wx:if="{{dataList.order.paymentStatus=='paid'}}">已支付</text>
+    <text wx:if="{{dataList.order.paymentStatus!='paid'}}">未支付</text>
+  </view>
+  <text>下单时间：{{dataList.order.createDate}}</text>
+</view>
+
+<!-- 已完成 -->
+<view class="button1" wx:if='{{options.status=="已完成"}}'>
+  <view class="buttonB" bindtap="junp" data-url="../index_3/index_3">再去逛逛</view>
+</view>
+<!-- 已取消 -->
+<view class="button1" wx:if='{{options.status=="已取消"}}'>
+  <view class="buttonB" bindtap="junp" data-url="../index_3/index_3">再去逛逛</view>
+</view>
+<!-- 待收货 -->
+<view class="button1" wx:if='{{options.status=="待收货"}}'>
+  <view class="buttonWid" bindtap="junp" data-url="../refund/refund">申请售后</view>
+  <view class="buttongrenn" bindtap="tap" data-type='confirm'>确认收货</view>
+</view>
+<!-- 待发货 -->
+<view class="button1" wx:if='{{options.status=="待发货"}}'>
+  <view class="buttonWid" bindtap="cecel">申请退款</view>
+  <view class="buttonWid1" bindtap="createPoster" data-phone='400-063-3337'>联系客服</view>
+</view>
+<view class="jian"></view>

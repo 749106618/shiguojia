@@ -1,0 +1,65 @@
+<!-- 地址+商品详情 -->
+<view class="shop_box n_border">
+  <view class="control_info">
+    <image wx:if="{{txt=='请点击这里设置地址'}}" src="https://www.wjfresh.com/file/upload/20200310/1583820618446.png" mode="widthFix"></image>
+    <image wx:elif="{{txt!='请点击这里设置地址'}}" src="https://www.wjfresh.com/file/upload/20200310/1583820678254.png" mode="widthFix"></image>
+
+    <view class="tit_box">
+      <p class="name ov fl">{{txt}}</p>
+    </view>
+    <view class="address">
+      <view class="txt ov" data-id="442014891e20b07">{{name}} {{tel}}</view>
+    </view>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class="shop_box">
+  <view class="shop_term confirm_term">
+    <text class="fontwe">订单详情</text>
+    <view class="select" wx:for="{{conData.order.orderItems}}" wx:key="index">
+      <image mode='widthFix' src='{{imgHeader}}{{item.thumbnail}}'></image>
+      <navigator hover-class='none' url='../goods_details1/goods_details1?goodsId={{item.goodsInfo.shopId}}' data-id="{item.goodsInfo.id}}">
+        <view class="term_center">
+          <view class="shop_title">{{item.goodsInfo.goodsTitle}}</view>
+          <view class="shop_decs">{{item.goodsInfo.unit}}</view>
+        </view>
+        <view class="term_right">
+          <text class="zi">×{{item.quantity}}</text>
+        </view>
+        <view class="confirm_right bview">
+          <view class="price">
+            <view class="money clearfix">
+              <text class="fr">¥ {{item.goodsInfo.price}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- 价格列表 -->
+<view class="shop_box">
+  <p>
+    <span class="fl fontwe">配送费</span>
+    <span class="num fr" id="youf">¥{{youf}}</span>
+  </p>
+  <p bindtap="junpShopList">
+    <span class="fl fontwe">优惠劵</span>
+    <span class="num fr" id="discount" data-id="{{discountId}}">¥{{conData.order.couponDiscount}}</span>
+  </p>
+  <text class="amountP">共件{{conData.order.quantity}}商品,合计：￥{{conData.order.amountPayable}}</text>
+</view>
+<view style='height:96rpx'></view>
+<!-- 底部确认订单 -->
+<view class="settle_box">
+  <view class="settle_center">
+    <a class="settle_btn" bindtap="zhezshow1">去支付</a>
+    <view class="total_amount total_box">
+      <span class="txt fl">待支付 </span>
+      <span class="price fl">
+        <span> ¥</span>
+        <b>{{conData.order.amountPayable}}</b>
+      </span>
+    </view>
+  </view>
+</view>

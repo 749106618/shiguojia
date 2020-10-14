@@ -1,0 +1,5 @@
+<!--pages/get_phone/get_phone.wxml-->
+<image src="https://www.wjfresh.com/file/upload/20200324/1585022614328.jpg" mode="widthFix"></image>
+<!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->
+<view bindtap="junpIndex">先去逛逛</view>
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">绑定您的微信</button>

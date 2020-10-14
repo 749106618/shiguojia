@@ -1,0 +1,37 @@
+<!--pages/receiving_address/receiving_address.wxml-->
+<view class="cent">
+  <view class="addUl">
+    <view class="addLi" id="{{item.isDefault==true?'active':''}}" wx:for='{{addList}}' wx:key='index' data-index='{{index}}'  bindtap='junpEditAddress1'>
+      <view class="optiy" wx:if='{{optiy==true}}' bindtap="keyOut"></view>
+      <view class="liTop">
+        <text class="name">{{item.area}}</text>
+        <text class="tel">{{item.address}}</text>
+      </view>
+      <view class="libot">
+        <text>{{item.consignee}} {{item.phone}}</text>
+      </view>
+      <!-- <view class="sbiao" wx:if='{{item.isDefault==true}}'>
+          <text>会员默认地址</text>
+      </view> -->
+      <view class="liEdit" bindtap="keyframes" data-index='{{index}}'>
+        <image src="http://www.wjfresh.com/file/upload/20191015/1571102366404.png" mode="widthFix"></image>
+      </view>
+      <view class="centList {{item.kyes}}">
+        <view bindtap='editaddress'>
+          <image src="{{imgHeader}}/file/upload/20200316/1584347342124.png" mode="widthFix"></image>
+          <text>修改</text>
+        </view>
+        <view bindtap="isDefualtAdd" wx:if='{{!item.isDefault}}'>
+          <image src="{{imgHeader}}/file/upload/20200316/1584347425269.png" mode="widthFix"></image> 
+          <text>设为默认</text>
+        </view>
+        <view bindtap='deladdress' data-addressid='{{item.id}}'>
+          <image src="http://www.wjfresh.com/file/upload/20191015/1571104427294.png" mode="widthFix"></image>
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image src="http://www.wjfresh.com/file/upload/20191014/1571017847095.png" mode="widthFix" class="noneImg" wx:if='{{addList.length==0}}'></image>
+  <button class="footer" bindtap="junpEditAddress">新增地址</button>
+</view>

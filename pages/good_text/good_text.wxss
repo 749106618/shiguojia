@@ -1,0 +1,21 @@
+/* pages/good_text/good_text.wxss */
+page{
+  background: #f2f2f2;
+}
+
+text{
+  width: 92vw;
+  display: block;
+  margin-left: 4vw;
+  color: #333;
+  line-height: 50rpx;
+}
+
+.text1{
+  font-weight: bold;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.text2{
+  font-size: 29rpx;
+}

@@ -1,0 +1,81 @@
+/* pages/refund/refund.wxss */
+@import"../confirm_order/confirm_order.wxss";
+.buts view{
+  display: inline-block;
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10rpx rgb(210, 210, 210);
+  margin: 30rpx 20rpx 0 0;
+  padding: 0 15rpx;
+}
+
+#active{
+  background: #65a032;
+  color: #fff;
+  box-shadow: 0;
+}
+
+.shop_box {
+  float: left;
+  padding: 30rpx 3vw;
+  margin-left: 4vw;
+}
+.term_center {
+  width: 210rpx;
+}
+.select{
+  float: left;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.shopB_po{
+  position: absolute;
+  top: 35rpx;
+  right: 20rpx;
+  font-weight: bold;
+  font-size: 25rpx;
+}
+#textarea{
+  background: #f5f5f5;
+  width: 96%;
+  padding: 30rpx 2%;
+  border-radius: 10rpx;
+  height: 300rpx;
+}
+.refundImg{
+  position: absolute;
+  bottom: 50rpx;
+  width: 150rpx;
+  height: 150rpx;
+  left: 40rpx;
+  z-index: 10
+}
+.removeImg{
+  width: 30rpx;
+  position: absolute;
+  left: 180rpx;
+  bottom: 48rpx;
+  z-index: 11
+}
+.shop_decs{
+  position: absolute;
+  bottom: 30rpx;
+}
+.submit{
+  width: 92vw;
+  position: fixed;
+  bottom: 20rpx;
+  margin-left: 4vw;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  color: #fff;
+  background: #65a032;
+  font-weight: bold;
+}

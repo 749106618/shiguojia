@@ -1,0 +1,110 @@
+<!--pages/porder_details/porder_details.wxml-->
+<view class="header">
+  <!-- <text class="hstate">{{h3text}}</text>
+  <text class="hTxt">{{timeDiff}}</text> -->
+  <view class="hpo">
+    <view class="imgList1">
+      <!-- 地址 -->
+      <image src="../image/orderD3.png" bindtap="updateOrderddress" mode="widthFix" class="listImg1" wx:if='{{log==false}}'></image>
+      <!-- 物流 -->
+      <image src="../image/orderD1.png" mode="widthFix" class="listImg2" wx:if='{{log==true}}'></image>
+    </view>
+    <view class="aTxtView">
+      <text class="aTxt" bindtap="updateOrderddress" wx:if='{{log==false}}'>{{dataList.order.consignee}} {{dataList.order.phone}}</text>
+      <text class="aTxta" wx:if='{{log==true}}'>{{deliveryCorptext}}</text>
+    </view>
+    <view class="aTxt1View">
+      <text class="aTxt1" bindtap="updateOrderddress" wx:if='{{log==false}}'>{{dataList.order.address}}</text>
+      <text class="aTxt1a" wx:if='{{log==true}}'>运单号：{{trackingNo}}</text>
+      <!-- 物流-复制运单号 -->
+      <image src="../image/orderD6.png" mode="widthFix" class="listImg3"></image>
+    </view>
+    <view class="imgList2" bindtap="log_order">
+      <!-- 订单-查看物流 -->
+      <image src="../image/orderD1.png" mode="widthFix" class="listImg4" wx:if='{{log1==true}}'></image>
+      <image src="../image/orderD2.png" mode="widthFix" class="listImg5" wx:if='{{log1==true}}'></image>
+      <!-- 物流-订单 -->
+      <image src="../image/orderD7.png" mode="widthFix" class="listImg6" wx:if='{{log==true}}'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 待发货-已发货 -->
+<view class="cent"  wx:if='{{log==false}}'>
+  <view class="jian">
+    <view class="indexList" wx:for='{{dataList.order.orderItems}}' wx:key='index'>
+      <image src="{{item.shopinfo.recommendImg}}" mode="widthFix" class="shopImg"></image>
+      <view class="shopRight">
+        <text class="shopTitle">{{item.shopinfo.shopTitle}}</text>
+        <text class="shopCont">{{item.shopinfo.shopDescribe}}</text>
+        <text class="pric">￥{{item.shopinfo.price}}</text>
+      </view>
+    </view>
+    <view class="cent1">
+      <view class="cent1Ul">
+        <text class="centLeft">商品总价：</text>
+        <text class="centRigh">￥{{dataList.order.price}}</text>
+      </view>
+      <view class="cent1Ul">
+        <text class="centLeft">余额支付：</text>
+        <text class="centRigh">￥{{dataList.order.amountPaid}}</text>
+      </view>
+      <view class="cent1Ul">
+        <text class="centLeft yellow">实付款：</text>
+        <text class="centRigh red">￥{{dataList.order.amountPaid}}</text>
+      </view>
+    </view>
+    <view class="cent2">
+      <view class="cent1Ul">
+        <text class="centLeft">订单编号：</text>
+        <image src="../image/orderD5.png" mode="widthFix" class="centRighImg" bindtap='copyText' data-text="{{dataList.order.id}}"></image>
+        <text class="centRigh">{{dataList.order.id}}</text>
+      </view>
+      <view class="cent1Ul">
+        <text class="centLeft">下单日期：</text>
+        <text class="centRigh">{{dataList.order.createDate}}</text>
+      </view>
+      <!-- 已发货 -->
+      <view class="cent1Ul" wx:if='{{trackingNo!=undefined}}'>
+        <text class="centLeft">物流单号：</text>
+        <image src="../image/orderD5.png" mode="widthFix" class="centRighImg" bindtap='copyText' data-text="{{trackingNo}}"></image>
+        <text class="centRigh">{{trackingNo}}</text>
+      </view>
+      <view class="btnview" wx:if='{{status==true}}'>
+        <text class="btn yellow1" bindtap="confirm">确认</text>
+        <text class="btn black" bindtap="cancel">取消</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 物流 -->
+<view class="log" wx:if='{{log==true}}'>
+  <view class="aui-timeLine b-line" style="margin: 0 20rpx;">
+        <ul class="aui-timeLine-content">
+            <li class='aui-timeLine-content-item' wx:for='{{logList.list}}' wx:key='index'>
+                <em class="aui-timeLine-content-icon"></em>
+                <p>{{item.time}}</p>
+                <p class='lTxt'>{{item.status}}</p>
+            </li>
+        </ul>
+    </view>
+</view>
+
+<loading hidden="{{onOff}}">加载中</loading>
+
+<view class="cencel" wx:if="{{cFlag}}">
+  <view class="jian1">
+    <view class="cView">
+    <text class="cTxt1">您确认放弃本月鲜果</text>
+    <text class="cTxt2">会员福利赠送的12个月水果中，可自由选择放弃3次。放弃后当月水果取消，并赠送{{cenList. currency_reversion}}吾纪币全场通用。(1个吾纪币=1元)</text>
+    <text class="cTxt3">放弃本月鲜果 返回{{cenList.currency_reversion}}枚吾纪币</text>
+    <text class="cTxt4">每年仅可放弃3次</text>
+    <text class="cTxt5">{{cenList.size}}/3</text>
+    <text class="cTxt6">本年度您已放弃次数</text>
+    <view class="cView1">
+      <view class="ccView" bindtap="cancel1">确认放弃</view>
+      <view class="ccView1" bindtap="cancel2">取消</view>
+    </view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,189 @@
+/* pages/receiving_address/receiving_address.wxss */
+.cent{
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: #ffffff;
+  z-index: 2;
+}
+.footer{
+  position: fixed;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 32rpx;
+  width: 92vw;
+  background: #65a032;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+}
+
+.noneImg{
+  display: block;
+  width: 350rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.addUl{
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.addLi{
+  height:150rpx;
+  background: #fff;
+  margin: 30rpx 0 0 0;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 0 15rpx #ececec;
+  position: relative;
+  z-index: 1;
+}
+
+/* #active{
+  height:180rpx;
+  background-image: linear-gradient(315deg, #ffd85c, #fead37);
+  color: #fff;
+} */
+
+.sbiao{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200rpx;
+  text-indent: 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #ff9917;
+  border-top-right-radius:20rpx;
+  font-size: 26rpx;
+}
+
+.sImg{
+  width: 30rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.sbiao text{
+  margin-left: 10rpx;
+}
+
+.liTop{
+  margin: 30rpx 0 0 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.libot{
+  width: 90%;
+  margin: 10rpx 0 0 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  color: #666;
+}
+
+#active .liEdit{
+  background: #fff;
+}
+
+.liEdit{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom-left-radius: 20rpx;
+  background: #ececec;
+  text-align: center;
+}
+
+.liEdit image{
+  width: 30rpx;
+}
+
+.keyNone{
+  display: none;
+}
+
+.keyframes{
+  animation:lanimation 0.5s ease-in-out 0s 1 alternate forwards;
+}
+
+.keyOut{
+  animation:lanimation1 0.5s ease-in-out 0s 1 alternate forwards;
+}
+
+@-webkit-keyframes lanimation
+{
+  from {right:-440rpx;}
+  to {right:0;}
+}
+
+@-webkit-keyframes lanimation1
+{
+  from {right:0;}
+  to {right:-440rpx;}
+}
+
+#active .centList{
+  height: 180rpx;
+}
+
+#active .centList text{
+  color: #000;
+}
+
+#active .centList image{
+  margin-top: 50rpx;
+}
+
+.centList view{
+  flex: 1;
+  text-align: center;
+}
+
+.centList image{
+  width: 50rpx;
+  margin-top: 40rpx;
+}
+
+.centList text{
+  display: block;
+}
+
+.centList{
+  position: absolute;
+  top: 0;
+  right:-440rpx;
+  width: 400rpx;
+  height: 150rpx;
+  /* background-image: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,1)); */
+  background: #fff;
+  z-index: 999;
+  box-shadow: 0rpx 0 40rpx #fff;
+  display: flex;
+  font-size: 25rpx;
+}
+
+.optiy{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0)
+}

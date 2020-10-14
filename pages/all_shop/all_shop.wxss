@@ -1,0 +1,105 @@
+/* pages/all_shop/all_shop.wxss */
+@import"../css/pjh.wxss";
+.cent{
+  /* float: left; */
+  /* margin-top: 1vh; */
+  background: #fff;
+}
+.y{
+  display: inline-block;
+  width: 20vw;
+  background: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  height: 94vh;
+  margin-top: 3vh;
+  overflow: auto;
+  color: #5c5133;
+  margin-left: 3vw;
+
+}
+.y::-webkit-scrollbar,.center::-webkit-scrollbar{
+  display:none
+}
+.y text{
+  display: block;
+  text-align: center;
+  padding: 20rpx 0;
+  overflow: hidden;
+  height: 30rpx;
+}
+.center{
+  float: right;
+  width: 73vw;
+  background: #fff;
+  height: 98vh;
+  margin: 2vh 2vw;
+  overflow: auto;
+  overflow-x: hidden;
+  border-radius: 20rpx;
+  box-shadow: 0 0 20rpx #ececec;
+}
+.jian{
+  width: 100%;
+  height: 70rpx;
+}
+.cActive{
+  background: #fff;
+  font-weight: bold;
+  font-size: 34rpx;
+  color: #65a032;
+}
+.shop{
+  float: left;
+  width: 73vw;
+  margin: 20rpx 0 0 2vw;
+}
+.shop_left{
+  float: left;
+  width: 24vw;
+  text-align: center
+}
+.shop_left image{
+  width: 19.2vw;
+  height: 19.2vw;
+  border-radius: 20rpx;
+}
+.shop_righ{
+  float: right;
+  width: 49vw;
+  /* margin-right: 2vw; */
+  position: relative;
+}
+.shopTit{
+  width: 85%;
+}
+.shopcent{
+  width: 85%;
+  color: #aeaeae;
+  font-size: 25rpx;
+}
+.sshop{
+  float: left;
+  margin-top: 20rpx;
+  padding-bottom:20rpx;
+}
+.add_cart{
+  width: 40rpx;
+  position: absolute;
+  right: 58rpx;
+  bottom: 10rpx;
+}
+.sspric{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+  color: #ff7f00;
+}
+.ssrmb{
+  font-size: 25rpx;
+  color: #fda800;
+}
+.sswidth{
+  font-size: 25rpx;
+  color: #cfcfcf;
+}

@@ -1,0 +1,23 @@
+<!--pages/good_text/good_text.wxml-->
+<text class="text1">1、由客户个人原因造成的退换货情况</text>
+<text class="text2">① 无任何理由退回(产品与包装完好无损的情况下)</text>
+<text class="text2">② 因客户个人原因造成的退换货，将不退还该订单的运费，退换货时产生的运费，由客户承担</text>
+
+<text class="text1">2、由侍果家造成的退换货情况</text>
+<text class="text2">① 发现收到的产品并非订购的产品时，请提供订单编号或订购手机号，以便跟进退换服务</text>
+<text class="text2">② 产品本身质量问题，请提供订单编号或订购手机号，以便提供售后服务</text>
+<text class="text2">③ 配送无故延期</text>
+<text class="text2">④ 以上因侍果家造成的退换货，侍果家会承担退换货产生的运费</text>
+
+<text class="text1">3、以下情况拒绝进行任何退换货</text>
+<text class="text2">① 产品存在质量问题时，客户丢弃或食用产品之后再进行投诉咨询的</text>
+<text class="text2">② 产品经配送人员检查后并非侍果家出售的产品</text>
+<text class="text2">③ 产品超过规定的48小时内售后服务时间</text>
+
+<text class="text1">4、退换货提示</text>
+<text class="text2">① 订单中如有赠品，退货时，如不满赠送条件，需将赠品一同退回，如赠品已经拆封或食用，则订单商品只换不退，如有不便，敬请谅解</text>
+<text class="text2">② 退款将会按原付款方式退回</text>
+<text class="text2">③ 网站图片及信息仅供参考，商品以实物为准，拍摄灯光和显示器色差可能会造成产品实物和图片有少许出入的情况，不属于质量问题</text>
+
+<text class="text1">5、部分易腐商品</text>
+<text class="text2">部分易腐商品（如：榴莲、山竹等）不享受“48小时退换货”服务，签收时如有产品质量问题，可直接拒收</text>

@@ -1,0 +1,100 @@
+<!--pages/shopping_list/shopping_list.wxml-->
+<!-- 导航栏 -->
+<view class="movie-container">
+  <view class="navbar" wx:if='{{options.flag==undefined}}'>
+    <block wx:for="{{navbarTitle}}" wx:key="index">
+      <view class="navbar-item {{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="movie-content-wrapper">
+    <swiper current="{{navbarActiveIndex}}" bindanimationfinish="onBindAnimationFinish" style='height:{{pHeight}}px'>
+      <swiper-item wx:for="{{navbarTitle}}" wx:key="index">
+        <!-- <scroll-view scroll-y="{{true}}">
+          {{item}}
+        </scroll-view> -->
+        <view class="swiper-container shopping_content">
+          <view class="swiper-wrapper w">
+            <view class="swiper-slide d">
+              <view class="swiper-container2">
+                <view class="swiper-wrapper">
+                  <view class="swiper-slide list-group">
+                    <!-- 直接进入优惠卷列表，没带参 -->
+                    <view class="imgView {{effective?'juan1':'juan2'}}" wx:if='{{options.flag==undefined}}' wx:for='{{dataList}}' data-id='{{item.couponCodeId}}' data-discount='{{item.discount}}' data-type='{{item.coupon_type}}' bindtap="junpAll" wx:key='index'>
+                      <image src="../image/shop_list_logo.png" mode="widthFix" class="logo"></image>
+                      <image src="../image/shop_list_none.png" mode="widthFix" wx:if='{{effective==false}}' class="noneImg"></image>
+                      <view class="viewRight">
+                        <text class="name">{{item.name}}</text>
+                        <!-- discount折扣 fullsub满减 cash现金券 -->
+                        <view class="vRigPric" wx:if='{{item.coupon_type=="discount"}}'>
+                          <view>
+                            <text class="leftTxt2">{{item.discount*10}}</text>
+                            <text class="leftTxt1">折</text>
+                          </view>
+                          <text class="leftText3">满{{item.minimum_price}}元可用</text>
+                        </view>
+                        <view class="vRigPric" wx:elif='{{item.coupon_type=="fullsub"}}'>
+                          <view>
+                            <text class="leftTxt1">¥</text>
+                            <text class="leftTxt2">{{item.discount}}</text>
+                          </view>
+                          <text class="leftText3">满{{item.minimum_price}}元可用</text>
+                        </view>
+                        <view class="vRigPric" wx:else='{{item.coupon_type=="cash"}}'>
+                          <view>
+                            <text class="leftTxt1">¥</text>
+                            <text class="leftTxt2">{{item.discount}}</text>
+                          </view>
+                          <text class="leftText3">满{{item.minimum_price}}元可用</text>
+                        </view>
+                      </view>
+                      <view class="viewBto">
+                        <text>使用日期{{item.begin_date}}-{{item.end_date}}</text>
+                        <text class="go">去使用</text>
+                      </view>
+                    </view>
+                    <!-- 从订单进来选优惠卷 -->
+                    <view class="imgView {{effective?'juan1':'juan2'}}" wx:if='{{options.flag!=undefined}}' wx:for='{{dataList.list}}' data-id='{{item.id}}' bindtap="junp" wx:key='index' data-discount='{{item.discount}}' data-type='{{item.coupon_type}}'>
+                      <image src="../image/shop_list_logo.png" mode="widthFix" class="logo"></image>
+                      <image src="../image/shop_list_none.png" mode="widthFix" wx:if='{{effective==false}}' class="noneImg"></image>
+                      <view class="viewRight">
+                        <text class="name">{{item.name}}</text>
+                        <!-- discount折扣 fullsub满减 cash现金券 -->
+                        <view class="vRigPric" wx:if='{{item.coupon_type=="discount"}}'>
+                          <view>
+                            <text class="leftTxt2">{{item.discount*10}}</text>
+                            <text class="leftTxt1">折</text>
+                          </view>
+                          <text class="leftText3">满{{item.minimum_price}}元可用</text>
+                        </view>
+                        <view class="vRigPric" wx:elif='{{item.coupon_type=="fullsub"}}'>
+                          <view>
+                            <text class="leftTxt1">¥</text>
+                            <text class="leftTxt2">{{item.discount}}</text>
+                          </view>
+                          <text class="leftText3">满{{item.minimum_price}}元可用</text>
+                        </view>
+                        <view class="vRigPric" wx:else='{{item.coupon_type=="cash"}}'>
+                          <view>
+                            <text class="leftTxt1">¥</text>
+                            <text class="leftTxt2">{{item.discount}}</text>
+                          </view>
+                          <text class="leftText3">满{{item.minimum_price}}元可用</text>
+                        </view>
+                      </view>
+                      <view class="viewBto">
+                        <text>使用日期{{item.begin_date}}-{{item.end_date}}</text>
+                        <text class="go">去使用</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

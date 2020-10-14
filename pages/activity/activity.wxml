@@ -1,0 +1,44 @@
+<!--pages/activity/activity.wxml-->
+<view class="header">
+  <image src="{{userImg}}" mode="widthFix" class="userImg"></image>
+  <view class="hTxt">基础版会员</view>
+  <view class="tab">
+    <view class="td {{check==1?'check':''}}" bindtap="check" data-check="1">
+      <text class="tit">2</text>
+      <text class="tTxt">无限任务</text>
+    </view>
+    <view class="td {{check==2?'check':''}}" bindtap="check" data-check="2">
+      <text class="tit">0</text>
+      <text class="tTxt">日常任务</text>
+    </view>
+  </view>
+</view>
+
+<!-- 滑动效果 jian的宽度=swipper个数*swipper宽度+(计算出来的距离旁边的距离{(windowwidth-swipper宽度)/2})*2+swiper左边距 -->
+<view class="swipperList" wx:if='{{check==1}}'>
+  <view class="jian" style="width:{{w}}px">
+    <view class="p">
+      <view class="swipper">
+        <text class="sTxt1">邀请新会员</text>
+        <text class="sTxt2">成功招募新会员获得奖励</text>
+        <view class="sview1">
+          <text class="sTxt3">{{dataList.invitedEarnings_Proportion}}</text><text class="sTxt4">￥</text>
+          <text class="sTxt5">每邀请一人奖励</text>
+        </view>
+        <text class="sTxt6">已邀请{{dataList.count}}人，获得奖励:</text>
+        <text class="sTxt7">{{dataList.invitedEarnings}}</text><text class="sTxt8">￥</text>
+      </view>
+      <view class="swipper">
+        <text class="sTxt1">会员消费分红</text>
+        <text class="sTxt2">可获取直属会员名下会员消费额分红</text>
+        <view class="sview1">
+          <text class="sTxt3">{{cp}}</text><text class="sTxt4">%</text>
+          <text class="sTxt5">每位会员消费分红</text>
+        </view>
+        <text class="sTxt6">已邀请{{dataList.count}}人，获得分红:</text>
+        <text class="sTxt7">{{dataList.consumptionIncome}}</text><text class="sTxt8">￥</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="swipperList" wx:if='{{check==2}}'></view>

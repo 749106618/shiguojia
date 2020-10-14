@@ -1,0 +1,162 @@
+/* pages/order_details/order_details.wxss */
+@import"../confirm_order/confirm_order.wxss";
+.shop_box{
+  float: left;
+  margin-left: 4vw;
+}
+.b{
+  display: block;
+}
+.padB{
+  padding-bottom: 70rpx;
+}
+.status_top{
+  color: #65a032;
+  font-weight: bold;
+  font-size: 33rpx;
+}
+.status_top>image{
+  width: 50rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.status_cen{
+  color: #666;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.status_bot{
+  color: #333;
+  font-size: 28rpx;
+}
+.consignee{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  color: #999;
+}
+
+.add_orderIdT,.add_orderIdB{
+  color: #333;
+  float: left;
+  width: 100%;
+  font-weight: bold;
+}
+.add_orderIdT{
+  padding-bottom: 40rpx;
+}
+
+.odId_Add_left{
+  float: left
+}
+
+.odId_Add_Righ{
+  float: right;
+}
+.odWid{
+  width: 70%;
+  text-align: right;
+}
+
+.odsSize{
+  font-size: 25rpx;
+  margin-top: 5rpx;
+}
+
+#mL{
+  margin-right: 2%;
+}
+
+.selectT image{
+  width: 50rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
+}
+
+.select{
+  float: left;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.term_center{
+  width: 210rpx;
+  position: relative;
+  height: 160rpx;
+}
+
+.shop_decs{
+  position: absolute;
+  bottom: 30rpx;
+  left: 0
+}
+.amountP>text{
+  color: #65a032;
+}
+.shop_box1{
+  float: left;
+  width: 86vw;
+  padding: 0 7vw;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  position: relative;
+  color: #333;
+}
+.shop_box1>text{
+  display: block;
+  line-height: 80rpx;
+}
+
+.button1{
+  float: left;
+  width: 86vw;
+  margin: 30rpx 7vw;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.button1>view{
+  height: 60rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.buttonWid{
+  float: left;
+  color: #666;
+  background: #fff;
+  width: 45%;
+  box-shadow: 0 0 10rpx rgb(210, 210, 210);
+}
+
+.buttonWid1{
+  float: right;
+  color: #666;
+  background: #fff;
+  width: 45%;
+  box-shadow: 0 0 10rpx rgb(210, 210, 210);
+}
+
+.buttongrenn{
+  float: right;
+  color: #fff;
+  background: #65a032;
+  width: 45%;
+}
+
+.buttonB{
+  width: 100%;
+  color: #666;
+  background: #fff;
+  box-shadow: 0 0 10rpx rgb(210, 210, 210);
+}
+
+.right{
+  float: right;
+}
+.jian{
+  width: 100%;
+  height: 30rpx;
+  float: left;
+}

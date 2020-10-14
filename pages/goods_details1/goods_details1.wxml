@@ -1,0 +1,44 @@
+<!--pages/goods_details1/goods_details1.wxml-->
+<!-- 轮播 -->
+
+  <swiper class="swiperView">
+    <block wx:for="{{Goods.showImageUrl}}" wx:key="*this">
+      <swiper-item>
+        <image src='{{imgHeader}}{{item}}'></image>
+      </swiper-item>
+     </block>
+  </swiper>
+
+<!-- 商品描述 -->
+<view class="shop">
+  <text class="shopTit b">{{Goods.goodsTitle}}</text>
+  <text class="shopTex b">{{Goods.goodsDescribe}}</text>
+  <view class="shopP">
+    <text class="shopRm">￥</text>
+    <text class="shopPric">{{Goods.price}}</text>
+  </view>
+  <view class="shopBut">
+    <text class="bwidth">{{Goods.unit}}</text>
+  </view>
+  <text class="lastTime b">最慢明天08:00-18:00送达</text>
+  <view class="bz" bindtap="junp">
+    <image src="../image/gd1_1.png" mode="widthFix" class="bzImg1"></image>
+    <text class="bzTxt1">保障</text>
+    <text class="bzTxt2">48小时退换货·全程冷链·果园标准</text>
+    <image src="../image/gd1_2.png" mode="widthFix" class="bzImg2"></image>
+  </view>
+</view>
+
+<!-- 富文本 -->
+<rich-text nodes="{{nodes}}"></rich-text>
+
+<!-- 底部 -->
+<view class="jian"></view>
+<view class="footer">
+  <view class="card" bindtap="backIndex">
+    <!-- <image src="../image/gd1_2.png" mode="widthFix"   class="cardImg"></image> -->
+    返回
+  </view>
+  <view class="buy" bindtap="buy">立即购买</view>
+  <view class="addCard" bindtap="addCard">加入购物车</view>
+</view>

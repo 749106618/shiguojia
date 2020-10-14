@@ -1,0 +1,32 @@
+<!--pages/after_sales_record/after_sales_record.wxml-->
+<view >
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+      <view class="jian">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">待付款<text class="po">0</text></view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">待发货<text class="po">1</text></view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">已发货<text class="po">2</text></view>
+        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">已完成<text class="po">0</text></view>
+      </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1,2,3]}}" wx:key='index'>
+            <scroll-view scroll-y="true" class="scoll-h index" >
+                <!-- 集合为空的时候显示 -->
+                <image src="http://www.wjfresh.com/file/upload/20191009/1570588196788.png" mode="widthFix" class="noneImg" ></image>
+                <!-- <block wx:for="{{expertList}}" wx:key="index">
+                    <view class="indexList" bindtap='info' data-index='{{index}}'>
+                      <image src="http://wxt.blzaixian.com/file/upload/20190909/1568000883403.png" mode="widthFix" class="shopImg"></image>
+                      <view class="shopRight">
+                        <text class="shopTitle">{{item.name}}</text>
+                        <text class="shopCont">{{item.tag}}</text>
+                        <text class="pric">￥{{item.answer}}</text>
+                        <text class="company">收件人:{{item.listen}}</text>
+                      </view>
+                      <image src="http://wxt.blzaixian.com/file/upload/20190909/1568014416049.png" mode="widthFix" class="shopImg1"></image>
+                    </view>
+                </block> -->
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

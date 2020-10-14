@@ -1,0 +1,110 @@
+<!-- 顶部图片 -->
+<!-- <image src="{{indexImg}}" mode='widthFix' class='headerImg'></image> -->
+<movable-area style="width:100vw;height:100vh">
+  <view class="dian">
+    <!-- <text>当前店铺:阳光100店</text> -->
+    <!--选择框-->
+    <view class="product-list">
+      <!--条件选择-->
+      <view class="choice-bar">
+        <view bindtap="opens" data-item="1" class="chioce-item" hover-class="click-once-opaque">
+        <text class="aTxt">当前店铺:</text>
+        {{start}}
+        </view>
+        <view class="sorting-list{{!isstart?' chioce-list-hide':' chioce-list-show'}}">
+          <view wx:for="{{dataList.companies}}" catchtap="onclicks1" data-index="{{index}}" class="sorting-item" hover-class="click-once" wx:key="userInfoListId">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="swiperBao">
+    <view class="swiperView">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{dataList.indexImg}}" wx:key="*this">
+          <swiper-item>
+            <image src='{{imgHeader}}{{item.imgUrl}}' data-caption='{{item.href}}' bindtap="junpUrl" mode="widthFix"></image>
+            <!-- <view class="swiper-item {{item}}"></view> -->
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <image src="https://www.wjfresh.com//file/upload/sgjupload/2020/03/27/d901b36822aa661bfaf8110dcb128fee.jpg" class="dj" mode="widthFix"></image>
+
+  <!-- 必吃榜 -->
+  <!-- <view class="conten">
+  <text class="biTxt">#必吃榜#</text>
+  <view class="pjh">
+    <view class="pj_shop">
+      <image class='pj_s_img' src="https://www.wjfresh.com/file/upload/20200303/1583223999011.png" mode="widthFix"></image>
+      <text class="pj_s_tit">新疆阿克苏苹果</text>
+      <text class="pj_s_txt">丝滑柔软，满满正能量</text>
+      <view class="pj_s_bot">
+        <view class="pj_bao">
+          <text class="pj_s_b_r">￥</text>
+          <text class="pj_s_b_pric">19.9/</text>
+          <text class="pj_s_b_width">4斤</text>
+        </view>
+        <text class="pj_addcard">加入购物车</text>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+  <!-- 当季时令 -->
+  <view wx:for='{{dataList.tmpList}}' wx:key='index'>
+      <view class="tmpTxt" wx:if='{{item.img==undefined}}'>{{item.name}}</view>
+      <image class="dj" wx:if='{{item.img!=undefined}}' bindtap="junpUrl" data-caption='{{item.url}}' src="{{imgHeader}}{{item.img}}" mode="widthFix"></image>
+      <view class="pjh">
+        <!-- 单个商品 -->
+        <view class="pj_shop" wx:for='{{item.goodsInfos}}' wx:key='index1' wx:for-item='item1' bindtap="junpDetails" data-id="{{item1.id}}">
+          <image class='pj_s_img' src="{{imgHeader}}{{item1.indexImg}}" mode="widthFix"></image>
+          <text class="pj_s_tit ov">{{item1.goodsTitle}}</text>
+          <text class="pj_s_txt ov">{{item1.goodsDescribe}}</text>
+          <view class="pj_s_bot ov">
+            <view class="pj_bao">
+              <text class="pj_s_b_r">￥</text>
+              <text class="pj_s_b_pric">{{item1.price}}/</text>
+              <text class="pj_s_b_width">{{item1.unit}}</text>
+            </view>
+            <image src="../image/add_cart.png" mode="widthFix" class="cardImg" data-id="{{item1.id}}" catchtap="addCard"></image>
+            <!-- <text class="pj_addcard" data-id="{{item1.id}}" catchtap="addCard">加入购物车</text> -->
+          </view>
+        </view>
+        <view class="jian"></view>
+      </view>
+  </view>
+
+    <!-- 全程冷链 购物无忧 售后无忧 -->
+  <view class="pj">
+    <view class="pj_left">
+      <image src="https://www.wjfresh.com/file/upload/20200303/1583218146530.png" mode="widthFix"></image>
+    </view>
+    <view class="pj_right">
+      <view class="pj_r_top">
+        <image src="https://www.wjfresh.com/file/upload/20200303/1583218161066.png" mode="widthFix"></image>
+      </view>
+      <view class="pj_r_bto">
+        <image src="https://www.wjfresh.com/file/upload/20200303/1583218176498.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <view class="botImg">
+    <image src="https://www.wjfresh.com/file/upload/20200407/1586252304154.jpg" mode='widthFix'></image>
+  </view>
+
+  <!-- 圆形悬浮 -->
+  <!-- <movable-view class="share" direction="all" x='{{x}}' y='{{y}}' bindtap="createPoster">
+    <text>一键</text>
+    <text>分享</text>
+  </movable-view> -->
+  <view class="shareZhe" wx:if='{{codeType==1}}' bindtap="codehide"></view>
+  <image class="codeImg" wx:if='{{codeType==1}}' src="{{imgHeader}}{{rqCode}}" mode="widthFix"></image>
+  <view class="juan" bindtap="juan" wx:if='{{popupWindow}}'></view>
+  <image src="{{dataList.popupWindowImg}}" wx:if='{{popupWindow}}' mode="widthFix" class="juanImg" bindtap="junpSplist"></image>
+  <image src="{{imgHeader}}/file/upload/20200422/1587548758321.png" wx:if='{{isNewUser}}' bindtap="junp" class="codeImg" mode="widthFix"></image>
+  <view class="shareZhe" wx:if='{{isNewUser}}' bindtap="juanNone"></view>
+  <!-- 广电店的券 -->
+  <image src="{{imgHeader}}/file/upload/20200604/1591264366224.png" wx:if='{{coup}}' bindtap="coup"class="codeImg" mode="widthFix"></image>
+  <view class="shareZhe" wx:if='{{coup}}' bindtap="hideCoup"></view>
+</movable-area>

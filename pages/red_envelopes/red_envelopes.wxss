@@ -1,0 +1,36 @@
+/* pages/red_envelopes/red_envelopes.wxss */
+view,image{
+  padding: 0;
+  margin: 0;
+}
+page{
+  background: #fcdd8b;
+}
+.header{
+  width: 100vw;
+}
+.cent{
+  width: 95vw;
+  margin: -5rpx auto 0;
+}
+.centImg{
+  width: 100%
+}
+.button{
+  width: 100%;
+  color: #fff;
+  background-image: linear-gradient(to right, #ff894c,#fb4339);
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius:40rpx;
+  font-size: 32rpx;
+  margin: 30rpx 0 10rpx;
+}
+
+text{
+  color: #cc5034;
+  display: block;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}

@@ -1,0 +1,476 @@
+/* pages/confirm_order/confirm_order.wxss */
+.shop_box{
+  width: 86vw;
+  padding: 30rpx 3vw;
+  margin:  0 auto;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx rgb(210, 210, 210);
+  margin-top: 30rpx;
+  position: relative;
+}
+textarea{
+  position: static;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+li{
+  display: block
+}
+.zhez{
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+}
+
+.shop_decs{
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.control_info .tit_box .name{
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.red{
+  color: #B21208
+}
+
+.juanImg{
+  width: 100%;
+}
+
+.total_box{
+    overflow:hidden;
+    float: left;
+}
+.total_box .price{
+  color: #65a032;
+  margin-left: 10rpx;
+}
+.total_box b{
+  font-size: 45rpx;
+  font-weight: bold;
+}
+.total_amount p{
+    font-size:28rpx;
+    /* padding-left:20%; */
+}
+.control_info{
+  overflow:hidden;
+  font-size: 24rpx;
+  background-color: #fff;
+}
+.control_info>image{
+  width: 40rpx;
+  float: left;
+  margin-right: 15rpx;
+  margin-top: 15rpx;
+  height: 36.5rpx;
+}
+.control_info .tit_box,
+.control_info .address{
+    overflow:hidden;
+    position:relative;
+}
+.address{
+  margin-left: 55rpx;
+}
+.control_info .tit_box{
+    margin-bottom: 10rpx;
+}
+.control_info .tit_box .name{
+    font-size:28rpx;
+}
+.control_info .address .txt{
+    background: url(http://www.wjfresh.com/file/upload/20190111/1547193095391.png) no-repeat center left;
+    background-size: 42rpx 42rpx;
+    float:left;
+    width:600rpx;
+    overflow:hidden;
+    line-height: 1.4;
+}
+.control_info .icon_img {
+    position:absolute;
+    width: 20rpx;
+    right:0;
+    top:40%;
+    margin-top:-12rpx;
+}
+.control_info .icon_img image{
+    width:100%;
+}
+.confirm_term li img{
+    margin-left:0;
+}
+.confirm_right{
+    float:right;
+}
+.confirm_term .term_center{
+    width:280rpx;
+    margin-left:24rpx;
+    margin-top: 10rpx;
+}
+.confirm_right .price .money{
+    font-size:26rpx;
+    margin-right: 20rpx;
+    margin-top: 10rpx;
+}
+.confirm_right .term_center .shop_title{
+    line-height:normal;
+}
+.confirm_right .price .txt{
+    font-size:24rpx;
+    text-align:right;
+    color:#565656;
+}
+.confirm_right .price .num{
+    font-size:28rpx;
+    text-align:right;
+}
+
+.price{
+  float: right
+}
+.coupon_box,.fp_desc{
+    background:#fff;
+    padding:10rpx 0;
+    width:700rpx;
+    margin:0 auto;
+    overflow:hidden;
+}
+.coupon_box .icon_img,
+.payment_tit .icon_img{
+    width: 24rpx;
+    height: 18rpx;
+    line-height: 24rpx;
+    float: right;
+    margin-top: 14rpx;
+}
+.payment_tit .i_img{
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    float: right;
+    margin-top: 10rpx;
+}
+.coupon_box .icon_img image,
+.payment_tit .icon_img image,
+.payment_tit .i_img image{
+    width:100%;
+}
+.coupon_box .coupon_l,
+.coupon_box .coupon_c{
+    float:left;
+    font-size:28rpx;
+    line-height:1.8!important;
+}
+.coupon_box .coupon_l{
+    color:#495057;
+    width:22%;
+}
+.coupon_box .coupon_c{
+    color:#a6a6a6;
+    width:60%;
+    margin-left:4%;
+}
+.price_box{
+    width:700rpx;
+    margin:0 auto;
+    overflow:hidden;
+    background: #fff
+}
+.shop_box p{
+    display: block;
+    font-size : 28rpx;
+    line-height : 1.8;
+    padding: 10rpx 0;
+    overflow:hidden;
+}
+.shop_box p:last-child{
+    border-bottom:none;
+}
+.pd_t142{
+    padding-top:1.42rpx;
+    background:#f4f4f4;
+}
+.zhezhao{
+    background:rgba(0,0,0,.5);
+    width:100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+    display:none;
+    z-index: 999;
+}
+.zhezhao.active{
+    display:block;
+}
+.payment_box{
+    position:fixed;
+    bottom:0;
+    background:#fff;
+    width:100%;
+    z-index: 999
+}
+.payment_box .center{
+    width:700rpx;
+    margin:0 auto;
+    overflow:hidden;
+}
+.payment_tit{
+    font-size:31.5rpx;
+    line-height:1.8;
+    text-align:center;
+    padding:12rpx 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+.xuanzhe{
+    font-size:28rpx;
+    color:#c4c4c4;
+    border-bottom:1px solid #e3e3e3;
+    line-height: 1.8;
+    padding: 10rpx 0;
+    overflow:hidden;
+}
+.payment_box ul li{
+    border-bottom:1px solid #e3e3e3;
+    overflow:hidden;
+    padding:12rpx 0;
+}
+.payment_box ul li:last-child{
+    padding:30rpx 0;
+    border:none; 
+}
+.payment_box ul li .img{
+    width:70rpx;
+    height:70rpx;
+    margin-left:20rpx;
+}
+.payment_box ul li .img img{
+    width:100%;
+}
+.payment_box ul li .txt_box{
+    margin-left:50rpx;
+}
+.payment_box ul li .txt_box .text{
+    font-size:28rpx;
+    color:#c4c4c4;
+}
+.payment_box ul li .txt_box .num{
+    font-size:24rpx;
+    color:#c4c4c4;
+}
+.payment_box ul li .circle{
+    margin-right:0;
+    margin-top:24rpx;
+}
+.payment_on{
+    background: url(http://www.wjfresh.com/file/upload/20190226/1551142212373.png) no-repeat center center #a70000;
+    border: solid 1px #e94d3e;
+    background-size: 36rpx 36rpx;
+}
+.pt_12{
+    margin-top:12rpx;
+}
+.payment_box ul li .need{
+    font-size:28rpx;
+    text-align:left;
+}
+.need .num,.need .youf_num{
+	float: right;
+}
+.order_prick{
+    color: #a70000;
+	float: right;
+	font-size: 28rpx;
+}
+.order_prick_1{
+	font-size: 28rpx;
+}
+.payment_box ul li .need .txt{
+    padding-right:20rpx;
+}
+.payment_box ul li .need .num,.need .youf_num{
+    color:#a70000;
+}
+.confirm{
+    display:block;
+    width:100%;
+    height:75rpx;
+    border-radius: 10rpx;
+    line-height:75rpx;
+    background:linear-gradient(to bottom,#0f9e68 0%,#0f9e68 100%);
+    color:#fff!important;
+    font-size:24rpx;
+    text-align:center;
+    cursor: pointer;
+    letter-spacing: 5rpx
+}
+
+.confirm img{
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
+	margin-right: 10rpx;
+}
+
+.pad_b20{
+    padding-top:20rpx;
+    background:#f4f4f4;
+}
+
+.settle_box{
+    width:100%;
+    background:#fff;
+    position:fixed;
+    left:0;
+    bottom:-1px;
+    height: 96rpx;
+    z-index:999;
+    overflow:hidden;
+    line-height: 96rpx;
+}
+.settle_center{
+    width:95vw;
+    margin-left:5vw;
+    overflow:hidden;
+}
+
+.settle_btn {
+    float: right;
+    width: 250rpx;
+    color:#fff!important;
+    text-align: center;
+    font-size: 28rpx;
+    height: 70rpx;
+    margin-top: 13rpx;
+    line-height: 70rpx;
+    background: #65a032;
+    border-radius: 35rpx;
+    margin-right: 30rpx;
+}
+.settle_btn:hover,
+.settle_btn:visited{
+    text-decoration:none;
+    color:#fff!important;
+}
+
+.shop_term{
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.fontwe{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.shop_term li{
+  display: block
+}
+.shop_term .select{
+    position:relative;
+    padding:20rpx 0;
+    overflow:hidden;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    background: #fff;
+    border-radius: 12rpx;
+}
+.shop_info{
+    position:relative;
+    /* height: 160rpx; */
+    margin:0 auto;
+    overflow:hidden;
+}
+.select .circle{
+    position:absolute;
+    margin:0;
+    top:60rpx;
+    left:10rpx;
+}
+.select image{
+    width:160rpx;
+    height:160rpx;
+    float:left;
+}
+.term_center{
+    width:340rpx;
+    float:left;
+    margin-left:30rpx;
+}
+.term_center .shop_title{
+    font-size:30rpx;
+    font-weight:bold;
+    color:#231815;
+}
+.term_center .shop_decs{
+    width: 280rpx;
+    font-size:24rpx;
+    color:#565656;
+    line-height:1.4;
+} 
+.term_center .shop_price{
+    font-size:28rpx;
+    color:#0D9F67;
+}
+
+.term_right{
+    float: left;
+    color:#333;
+}
+.term_right .zi{
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+.amountP{
+  display: block;
+  text-align: right;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.shop_box input{
+  height: 90rpx;
+  width: 100%
+}
+
+/* 自提/配送 */
+.buts view{
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10rpx rgb(210, 210, 210);
+  margin: 30rpx 20rpx 20rpx 0;
+  padding: 0 45rpx;
+}
+#active{
+  background: #65a032;
+  color: #fff;
+  box-shadow: 0;
+}
+.buts text {
+  display: block;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}

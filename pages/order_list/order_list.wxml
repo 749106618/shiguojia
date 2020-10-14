@@ -1,0 +1,56 @@
+<!--pages/order_list/order_list.wxml-->
+<view >
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+      <view class="jian">
+        <view wx:for="{{navbarTitle}}" wx:key="index" class="tab-item {{currentTab==index?'active':''}}"  data-current="{{index}}" bindtap="swichNav">{{navbarTitle[index]}}</view>
+        <!-- class='po' 订单数量 -->
+      </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{navbarTitle}}" wx:key='index'>
+            <scroll-view scroll-y="true" class="scoll-h index" >
+                <block wx:for="{{dataList}}" wx:key="index1">
+
+                    <view class="indexList" bindtap='info' data-id='{{item.id}}' data-index='{{index}}' data-status='{{status[index]}}'>
+                      <view>
+                        <text class="shopStatr">{{status[index]}}</text>
+                      </view>
+                      <!-- 单个商品 -->
+                      <view class="viewView" wx:for='{{item.orderItems}}' wx:if='{{item.orderItems.length==1}}' wx:key='index2' wx:for-item="items">
+                        <text class="shopTime">下单时间:{{items.createDate}}</text>
+                        <image src="{{imgHeader}}{{items.thumbnail}}" class="shopImg"></image>
+                        <view class="shopRight">
+                          <text class="shopTitle">{{items.name}}</text>
+                          <text class="shopCont">{{items.goodsInfo.unit}}</text>
+                          <text class="shopquantity">×{{items.quantity}}</text>
+                          <view class="pric">
+                          共{{item.quantity}}个商品 合计:
+                            <text class="green">￥</text>
+                            <text class="green pPrice">{{item.amount}}</text>
+                          </view>
+                        </view>
+                      </view>
+                      <!-- 多个商品 -->
+                      <view class="viewView" wx:if='{{item.orderItems.length!=1}}'>
+                        <text class="shopTime" wx:if='{{item.orderItems[0]!=null}}'>下单时间:{{item.orderItems[0].createDate}}</text>
+                        <image class="listImg" src="{{imgHeader}}{{items.thumbnail}}" mode="widthFix" wx:for='{{item.orderItems}}' wx:key='index2' wx:for-item="items"></image>
+                        <view class="pric" wx:if='{{item.orderItems[0]!=null}}'>
+                          共{{item.quantity}}个商品 合计:
+                            <text class="green">￥</text>
+                            <text class="green pPrice">{{item.amount}}</text>
+                          </view>
+                      </view>
+                      <view class="buttons">
+                        <view catchtap="button" data-id='{{item.id}}' data-index='{{index}}' class="shopImg1 b">{{showoperation[index]}}</view>
+                        <view catchtap="button1" data-id='{{item.id}}' class="shopImg1 a" data-index='{{index}}' wx:if='{{whitehide==1}}'>{{showoperation1[index]}}</view>
+                      </view>
+                    </view>
+
+                </block>
+                <image class="noneImage" wx:if='{{dataList.length==0}}' src="https://www.wjfresh.com/file/upload/20200314/1584154572557.png" mode="widthFix"></image>
+                <view class="jian1"></view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,134 @@
+/* pages/edit_address/edit_address.wxss */
+.picker-view {
+  width: 100%;
+  display: flex;
+  z-index: 12;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 40vh;
+}
+
+.picker-item {
+  line-height: 70rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  text-align: center;
+}
+
+.cent{
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  background: #ffffff;
+  z-index: 2;
+}
+.footer{
+  position: fixed;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 32rpx;
+  width: 92vw;
+  background: #65a032;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+}
+
+.btn1{
+  width: 100%;
+  height: 60rpx;
+  background: 0;
+  text-align: left;
+  border: 1rpx solid #fff;
+  font-size: 28rpx;
+  padding-left: 40rpx;
+}
+
+button::after{
+  border: 1px solid #fff;
+}
+
+.addLi{
+  width: 95%;
+  margin: 15rpx auto 0 auto;
+  height: 100rpx;
+}
+
+#active{
+  box-shadow: 0 0 10rpx #ececec;
+  border-radius: 50rpx;
+}
+
+.addLi text{
+  margin-left: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.addLi input{
+  padding: 0 40rpx;
+}
+.a {
+  color: #999
+}
+
+.textarea{
+  background: #e6e6e6;
+  width: 85%;
+  height: 250rpx;
+  position: relative;
+  border-radius: 30rpx;
+  margin: 40rpx auto 0 auto;
+  overflow: auto;
+}
+
+textarea{
+  width: 450rpx;
+  margin-left: 40rpx;
+}
+
+.shi{
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 60rpx;
+}
+
+.confirm_radio{
+    
+}
+.confirm_radio label{
+    border:none;
+    background:url(https://www.wjfresh.com/file/upload/20200407/1586252056097.png) no-repeat left;
+    background-size:40rpx 40rpx;
+    padding-left:48rpx;
+    cursor: pointer;
+    margin-left: 40rpx;
+}
+.confirm_radio input[type=radio]{
+    display: none;
+}
+.confirm_radio label.checked{
+    background:url(https://www.wjfresh.com/file/upload/20200407/1586252126116.png) no-repeat left;
+    background-size:40rpx 40rpx;
+}
+.text_box{
+  margin: 10px 25px;
+  border-bottom:1px solid #c3c3c3;
+  padding-bottom:10px
+}
+.addView{
+  width: 100%;
+  height: 30vh;
+  overflow: auto;
+}

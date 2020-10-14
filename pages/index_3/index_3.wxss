@@ -1,0 +1,401 @@
+page{
+  background-color: #fff
+}
+.tmpTxt{
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  float: left;
+  width: 100%;
+}
+
+.swiperBao{
+  background: url('https://www.wjfresh.com/file/upload/20200306/1583474314324.png') no-repeat;
+  background-size: 100%;
+  padding-top: 40rpx;
+}
+
+.swiperView{
+  width: 93vw;
+  border-radius: 40rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 53.9vw;
+  /* box-shadow: 0 10rpx 10rpx #d4d6da; */
+}
+
+swiper{
+  width: 93vw;
+  height: 465rpx;
+  overflow: hidden;
+}
+
+swiper-item {
+  overflow: hidden;
+}
+
+swiper image{
+  width: 100%;
+}
+
+.index{
+  width: 93vw;
+  padding: 20rpx 0;
+  box-shadow: -10rpx 0 40rpx #d4d6da;
+  margin-top: 40rpx;
+  border-top-right-radius: 80rpx;
+  border-bottom-right-radius: 80rpx;
+}
+
+.indexList{
+  position: relative;
+  width: 90%;
+  height: 200rpx;
+  border-radius: 40rpx;
+  margin: 40rpx auto 0;
+  box-shadow: 0 0 20rpx #d4d6da;
+}
+
+.shopImg{
+  position: absolute;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  left: 20rpx;
+  top: -20rpx;
+  box-shadow: 0 10rpx 10rpx #d6d6d6;
+}
+
+/* text{
+  display: block
+} */
+
+span{
+  display: inline-block
+}
+
+.shopRight{
+  margin-left: 240rpx;
+}
+
+.shopTitle{
+  width: 100%;
+  color: #595959;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  font-weight: 700;
+  float: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.shopCont{
+  color: #c0c0c0;
+  font-size: 26rpx;
+}
+
+.pric{
+  float: left;
+  margin-top: 20rpx;
+  color: #e15a52;
+  font-size: 30rpx;
+  font-weight: 700
+}
+
+.company{
+  float: left;
+  margin-top: 25rpx;
+  color: #b4b4b4;
+  font-size: 25rpx;
+}
+
+.shopImg1{
+  position: absolute;
+  width: 80rpx;
+  right: 0;
+  bottom: 0rpx;
+}
+
+.juan{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  /* filter: blur(8px); */
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.juanImg{
+  width: 500rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto
+}
+
+.share{
+  position: fixed;
+  right: 20rpx;
+  bottom: 100rpx;
+  z-index: 1;
+  background-image: linear-gradient(315deg, #fead37, #ffd85c);
+  width: 100rpx;
+  height: 100rpx;
+  /* line-height: 50rpx; */
+  border-radius: 50%;
+  text-align: center;
+  font-size: 27rpx;
+  color: #fff;
+  box-shadow: 5rpx 5rpx 10rpx #aaaaaa;
+}
+
+.shareview{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 3;
+}
+
+.share text{
+  display: block
+}
+
+.share text:first-child{
+margin-top: 14rpx;
+}
+
+.pj{
+  width: 93vw;
+  margin: 40rpx auto 0;
+}
+
+.pj_left{
+  width: 50%;
+  float: left;
+}
+
+.pj_left image{
+  width: 100%;
+}
+
+.pj_right{
+  width: 48%;
+  float: left;
+  margin-left: 2%;
+}
+
+.pj_r_top image{
+  width: 100%
+}
+
+.pj_r_bto image{
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.pjh{
+  width: 92vw;
+  margin: 0 4vw;
+  float: left;
+}
+
+.pj_shop{
+  width: 49%;
+  float: left;
+  box-shadow: 0 0 10rpx #ececec;
+  margin-right: 2%;
+  background: #fff;
+  margin-top: 3%;
+  border-radius: 20rpx;
+  overflow: hidden;
+  padding: 0 0 10rpx;
+}
+
+.pj_shop:nth-child(even){
+  margin-right: 0;
+}
+
+.pj_s_img{
+  width: 100%;
+}
+
+.pj_s_tit,.pj_s_txt{
+  margin-left: 15rpx;
+}
+.biTxt{
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+  display: block;
+}
+.conten{
+  float: left;
+  width: 100vw;
+}
+.pj_s_txt{
+  color: #666666;
+  font-size: 26rpx;
+  text-align: left;
+  display: block;
+  line-height: 40rpx;
+}
+.jian{
+  height: 20rpx;
+  float: left;
+  width: 100%;
+}
+.pj_s_tit{
+  color: #333333;
+  display: block;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.pj_s_b_r{
+  color: #ff7f00;
+  position: absolute;
+  left: -18rpx;
+  top: 6rpx;
+  font-size: 20rpx;
+}
+.pj_s_b_pric{
+  color: #ff7f00;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.pj_s_b_width{
+  color: #ff7f00;
+  font-size: 28rpx;
+}
+/* .pj_addcard{
+  color: #fff;
+  display: inline-block;
+  float: right;
+  height: 45rpx;
+  line-height: 45rpx;
+  padding: 0 10rpx;
+  border-radius: 22.5rpx;
+  font-size: 27rpx;
+  background: linear-gradient(315deg, #fe8101, #fdb400);
+  margin-right: 10rpx;
+} */
+.cardImg{
+  float: right;
+  padding: 0 10rpx 10rpx;
+  width: 40rpx;
+}
+.pj_bao{
+  margin-left: 30rpx;
+  float: left;
+  position: relative;
+}
+.pj_s_bot{
+  margin-top: 10rpx;
+}
+
+.dj{
+  width: 93vw;
+  margin-left: 3.5vw;
+}
+
+
+/* 下拉菜单 */
+.dian{
+  height: 80rpx;
+}
+.product-list {
+ width: 100%;
+ box-sizing: border-box;
+}
+.choice-bar {
+ position: fixed;
+ display: flex;
+ width: 100%;
+ font-size: 14px;
+ background-color: #fff;
+ z-index: 2;
+}
+.aTxt{
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.chioce-item {
+ background-color: #fff;
+ display: flex;
+ align-items: center;
+ /* justify-content: space-between; */
+ padding: 0 20rpx;
+ width: 100%;
+ height: 80rpx;
+ border-top: 1rpx solid #ddd;
+ border-bottom: 1rpx solid #ddd;
+ border-left: 1rpx solid #ddd;
+ font-weight: bold;
+ color: #65a032;
+}
+  
+.icon-chioce {
+ height: 25rpx;
+ width: 25rpx;
+ margin-right: 10px;
+}
+.district-list,.sorting-list,.filter-list {
+ margin-top: 2rpx;
+ position: absolute;
+ top: 80rpx;
+ left: 0;
+ width: 100%;
+ background-color: #fff;
+ z-index: -1;
+ font-size: 14px;
+ border-bottom: 1rpx solid #ddd;
+}
+.chioce-list-hide {
+ display: none !important;
+}
+.chioce-list-show {
+ /**top: 80rpx;**/
+ animation: slide 500ms;
+}
+  
+.sorting-item {
+ height: 80rpx;
+ line-height: 80rpx;
+ padding: 0 40rpx;
+ border-bottom: 1rpx solid #ddd;
+}
+
+.shareZhe{
+  width: 100vw;
+  height: 100ch;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+.codeImg{
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin:  auto;
+z-index: 100
+}
+
+.botImg image{
+  width: 93vw;
+  margin-left: 3.5vw;
+}

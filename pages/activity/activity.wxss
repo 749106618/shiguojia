@@ -1,0 +1,154 @@
+/* pages/activity/activity.wxss */
+.header{
+  height: 450rpx;
+  background: #ec6264;
+  position: relative;
+}
+
+.userImg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 5rpx solid #fefefe;
+  margin: 50rpx;
+}
+
+.hTxt{
+  position: absolute;
+  top: 140rpx;
+  left: 30rpx;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  background: #d1d1d1;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.tab{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90vw;
+  height: 150rpx;
+  background: #f8e5ea;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+}
+
+.td{
+  flex: 1;
+}
+
+.check{
+  background: #fff;
+}
+
+.tit{
+  color: #000000;
+  display: block;
+  font-weight: bold;
+  margin-top: 30rpx;
+  font-size: 40rpx;
+}
+
+.tTxt{
+  color: #887d81;
+  display: block;
+  font-size: 25rpx;
+}
+
+.check .tit,.check .tTxt{
+  color: #f3b049
+}
+
+.swipperList{
+  width: 100vw;
+  height: 680rpx;
+  overflow: auto;
+}
+
+.swipperList::-webkit-scrollbar {display:none}
+
+.jian{
+  width: 200vw;
+  height: 680rpx;
+}
+
+.p{
+  margin: 0 15vw;
+}
+
+.swipper{
+  float: left;
+  width: 70vw;
+  height: 600rpx;
+  background: #fff;
+  margin-right: 20px;
+  margin-top: 30rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 0 30rpx#f3f3f3;
+}
+
+.swipper:last-child{
+  margin-right: 0
+}
+
+.sTxt1{
+  display: block;
+  font-size: 32rpx;
+  margin: 70rpx 0 0 40rpx;
+}
+
+.sTxt2{
+  display: block;
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+
+.sTxt3{
+  font-size: 100rpx;
+}
+
+.sTxt4{
+  font-size: 40rpx;
+}
+
+.sTxt5{
+  display: block;
+  color: #595959;
+  font-size: 30rpx;
+}
+
+.sTxt6{
+  display: block;
+  margin: 30rpx 0 0 40rpx;
+  font-size: 20rpx;
+}
+
+.sTxt7{
+  margin-left: 40rpx;
+  color: #f3b049;
+  font-size:50rpx; 
+}
+
+.sTxt8{
+  color: #f3b049;
+  font-size: 20rpx;
+}
+
+.sview1{
+  text-align: center;
+  border-bottom: 2rpx dashed #cdcdcd;
+  margin-top: 70rpx;
+  color: #f3b049;
+  padding-bottom: 70rpx;
+}
+

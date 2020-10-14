@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<image src="../image/login.jpg" mode="widthFix" class="lImg"></image>
+<view class="ycode" wx:if='{{y}}'>{{yCode}}</view>
+<view class="cent">
+  <view>
+    <image src="../image/login.png" mode="widthFix" class="pImg"></image>
+    <input type="text" placeholder="请输入手机号" class="phone" maxlength="11" bindinput='user' value="{{user}}"></input>
+    <image src="../image/login2.png" mode="widthFix" class="pimg1" bindtap='usercls'></image>
+  </view>
+  <view>
+    <image src="../image/login1.png" mode="widthFix" class="pimg2"></image>
+    <input type="text" placeholder="请输入手机验证码" maxlength="6" bindinput='ucode' value="{{ucode}}"></input>
+    <button id="pTxt" disabled='{{disabled}}' bindtap='sendMessage'>{{time}}</button>
+  </view>
+  <view wx:if='{{!y}}'>
+    <image src="../image/login1.png" mode="widthFix" class="pimg2"></image>
+    <input type="text" placeholder="请输入邀请码(必填)" bindinput='ycode' value="{{ycode}}"></input>
+  </view>
+  <button class="submit" open-type='getUserInfo' lang="zh_CN" bindgetuserinfo='pjUserInfo'>登录</button>
+  <view class="t">v3.0</view>
+</view>

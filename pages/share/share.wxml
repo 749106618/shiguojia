@@ -1,0 +1,14 @@
+<!--pages/share/share.wxml-->
+<image class="codeImg" src="{{code}}" mode="widthFix"></image>
+
+<view class="centerView">
+  <view bindtap="saveImg">
+    <image src="../image/share_xia.png" mode="widthFix" class="shareImg"></image>
+    <button hover-class="none">下载图片</button>
+  </view>
+  <view>
+    <image src="../image/share_wei.png" mode="widthFix" class="shareImg"></image>
+    <button open-type='share' hover-class="none">微信</button>
+  </view>
+</view>
+<loading hidden="{{onOff}}">加载中</loading>

@@ -1,0 +1,42 @@
+<!--pages/mini/mini.wxml-->
+<view class="header">
+  <view class="hpo">
+    <view class="hView1"><text class="hTxt1">剩余W币(元)</text></view>
+    <view><text class="hTxt3">{{cybermoney1}}</text><text class="hTxt4">.{{cybermoney2}}</text></view>
+    <view class="hBtn1" bindtap="btn">关于W币</view>
+    
+    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <!-- 弹出层 -->
+    <view class="modalDlg" wx:if="{{showModal}}">
+      <view class="jian1">
+          <text class="text">关于W币</text>
+          <text class="text1">1.W币为吾纪生鲜使用的虚拟货币，使用比例为1W币=1元人民币；可在吾纪生鲜商城指定商品等额人民币使用</text>
+          <text class="text1">2.在W币使用过程中如遇到问题，请及时联系在线客服获取帮助。</text>
+          <view bindtap="ok" class="ok">知道了</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cent">
+  <view class="jian">
+    <view class="cTop">
+      <text class="cTxt1">收支记录</text>
+    </view>
+    <view class="listUl" wx:if='{{dataList.page.records!=undefined||dataList.page.records!=null}}'>
+      <view class="listLi" wx:for='{{dataList.page.records}}' wx:key='index'>
+        <image src="http://www.wjfresh.com/file/upload/20191011/1570758991562.png" mode="widthFix" class="liImg"></image>
+        <view class="liCent">
+          <text class="liCTop">{{item.describes}}</text>
+          <text class="liCBot">{{item.createTime}}</text>
+        </view>
+        <text class="liRight">{{item.amount}}</text>
+        <text class="liRight">{{item.type==4?'-':'+'}}</text>
+      </view>
+    </view>
+    <view class="cNone" wx:if='{{dataList.page.records==undefined||dataList.page.records==null}}'>
+      <image src="http://www.wjfresh.com/file/upload/20191011/1570758156058.png" mode="widthFix" class="noneImg"></image>
+    </view>
+  </view>
+</view>
+<loading hidden="{{onOff}}">加载中</loading>

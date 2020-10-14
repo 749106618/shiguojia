@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index_3/index_3",
+    "pages/receiving_address/receiving_address",
+    "pages/red_envelopes/red_envelopes",
+    "pages/red_envelopes1/red_envelopes1",
+    "pages/shop_cart/shop_cart",
+    "pages/good_text/good_text",
+    "pages/user_index/user_index",
+    "pages/all_shop/all_shop",
+    "pages/get_phone/get_phone",
+    "pages/goods_details1/goods_details1",
+    "pages/goods_details/goods_details",
+    "pages/text/text",
+    "pages/activity/activity",
+    "pages/open/open",
+    "pages/userAgreement/userAgreement",
+    "pages/privilege/privilege",
+    "pages/share/share",
+    "pages/open_details/open_details",
+    "pages/discount_record/discount_record",
+    "pages/withdrawal/withdrawal",
+    "pages/order_list/order_list",
+    "pages/confirm_order/confirm_order",
+    "pages/shopping_list/shopping_list",
+    "pages/income_record/income_record",
+    "pages/login/login",
+    "pages/after_sales_record/after_sales_record",
+    "pages/go_pay/go_pay",
+    "pages/mini/mini",
+    "pages/porder_details/porder_details",
+    "pages/invitation_record/invitation_record",
+    "pages/edit_address/edit_address",
+    "pages/order_details/order_details",
+    "pages/password/password",
+    "pages/refund/refund"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "backgroundColor": "#fff",
+    "selectedColor": "#65a032",
+    "list": [
+      {
+        "pagePath": "pages/index_3/index_3",
+        "text": "首页",
+        "iconPath": "pages/image/pj_0_0.png",
+        "selectedIconPath": "pages/image/pj_1_0.png"
+      },
+      {
+        "pagePath": "pages/all_shop/all_shop",
+        "text": "全部商品",
+        "iconPath": "pages/image/pj_0_1.png",
+        "selectedIconPath": "pages/image/pj_1_1.png"
+      },
+      {
+        "pagePath": "pages/shop_cart/shop_cart",
+        "text": "购物车",
+        "iconPath": "pages/image/pj_0_2.png",
+        "selectedIconPath": "pages/image/pj_1_2.png"
+      },
+      {
+        "pagePath": "pages/user_index/user_index",
+        "text": "会员中心",
+        "iconPath": "pages/image/pj_0_3.png",
+        "selectedIconPath": "pages/image/pj_1_3.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,82 @@
+/* pages/login/login.wxss */
+page{
+  background: #1e1f1e
+}
+
+.lImg{
+  width: 100vw;
+}
+
+.cent{
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.cent input{
+  display: block;
+  border-bottom: 4rpx solid #fff;
+  padding: 20rpx 200rpx 20rpx 60rpx;
+  color: #fff;
+}
+
+.cent view{
+  position: relative;
+}
+
+.phone{
+  
+}
+
+.pImg{
+  width: 25rpx;
+  position: absolute;
+  top: 25rpx;
+  left: 20rpx;
+}
+
+.pimg1{
+  width: 28rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+}
+
+.pimg2{
+  width: 30rpx;
+  position: absolute;
+  top: 25rpx;
+  left: 15rpx;
+}
+
+#pTxt{
+  position: absolute;
+  top: 15rpx;
+  right: 20rpx;
+  color: #fff;
+  font-size: 25rpx;
+  background: #000;
+}
+
+.submit{
+  width: 280rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  background-image: linear-gradient(90deg, #82d057, #15ad69);
+  color: #fff;
+  margin: 100rpx auto 0;
+  text-align: center;
+}
+
+.t{
+  text-align: center;
+  color: #9c9c9c;
+  font-size: 20rpx;
+  margin-top: 20rpx;
+}
+.ycode{
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}

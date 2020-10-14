@@ -1,0 +1,8 @@
+<!--pages/red_envelopes/red_envelopes.wxml-->
+<image mode="widthFix" src="{{imgHeader}}/file/upload/20200512/1589273193887.png" class="header"></image>
+<view class="cent">
+  <image src="{{imgHeader}}/file/upload/20200512/1589273521047.png" mode="widthFix" class="centImg"></image>
+  <view class="button">立即分享</view>
+  <text>活动说明</text>
+  <text>领取了现金红包的用户将不可退款或订单售后</text>
+</view>
